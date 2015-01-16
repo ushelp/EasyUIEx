@@ -1,0 +1,49 @@
+
+
+table td {
+	font-size: 13px
+}
+
+#fm {
+	margin: 0;
+	padding: 10px 30px;
+}
+
+.ftitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	padding: 5px 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.fitem {
+	margin-bottom: 5px;
+}
+
+.fitem label {
+	display: inline-block;
+	width: 80px;
+}
+.icon-application{
+	background:url('icons/application.png') no-repeat center center;
+}
+.icon-lock-edit{
+	background:url('icons/lock_edit.png') no-repeat center center;
+}
+.icon-go{
+	background:url('icons/monitor_go.png') no-repeat center center;
+}
+.icon-close{
+	background:url('icons/close.png') no-repeat center center;
+}
+.icon-chart{
+	background:url('icons/chart_bar.png') no-repeat center center;
+}
+.icon-user{
+	background:url('icons/user.png') no-repeat center center;
+}
+.icon-group{
+	background:url('icons/group.png') no-repeat center center;
+}

@@ -296,8 +296,18 @@ uiEx.openTab(tabSelector, title, url, icon);
 uiEx.reloadSelTab(tabSelector);
 
 /**
- * 绑定tabs的右键菜单，实现关闭，关闭其他，关闭所有，刷新功能
- * 
+ * 绑定tabs的右键菜单，实现：关闭，关闭其他，关闭所有；关闭左侧标签页、关闭右侧标签页；刷新等菜单功能
+ * 必须在页面定义右键菜单标签（菜单id、菜单项的name不能修改）：
+ * 	<div id="tabsMenu" class="easyui-menu" style="width:120px;">
+		   <div name="close"   data-options="iconCls:'icon-close'">Close</div>  
+		   <div name="other"   data-options="">Close others</div>  
+		   <div name="all"  data-options="">Close all</div>
+		   <div class="menu-sep"></div>
+	       <div name="closeRight">Close right</div>
+	       <div name="closeLeft">Close left</div>
+	       <div class="menu-sep"></div>
+	      <div name="refresh"  data-options="iconCls:'icon-reload'">Refresh</div> 
+	</div>
  * @param tabSelector tab选择器
  */
 uiEx.addTabsMenu(tabSelector);

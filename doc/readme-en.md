@@ -293,7 +293,18 @@ uiEx.openTab(tabSelector, title, url, icon);
 uiEx.reloadSelTab(tabSelector);
 
 /**
- * Bind the tabs right click menu, to achieve close, close other, close all, refresh function
+ * Binding tabs of the right-click menu, to achieve: close, close other, close all; close tabs on the left, close tabs on the right; refresh the menu functions
+ * Must define the right page menu tab (menu id, name of the menu item can not be changed):
+ * 	<div id="tabsMenu" class="easyui-menu" style="width:120px;">
+		   <div name="close"   data-options="iconCls:'icon-close'">Close</div>  
+		   <div name="other"   data-options="">Close others</div>  
+		   <div name="all"  data-options="">Close all</div>
+		   <div class="menu-sep"></div>
+	       <div name="closeRight">Close right</div>
+	       <div name="closeLeft">Close left</div>
+	       <div class="menu-sep"></div>
+	      <div name="refresh"  data-options="iconCls:'icon-reload'">Refresh</div> 
+	</div>
  * 
  * @param tabSelector tabs selector
  */

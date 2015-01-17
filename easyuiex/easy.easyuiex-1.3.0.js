@@ -1,6 +1,7 @@
 /**
- * EasyUIEx 1.2.0
+ * EasyUIEx 1.3.0
  * 
+ * http://easyproject.cn
  * 
  * Copyright 2014 ray [ inthinkcolor@gmail.com ]
  * 
@@ -537,7 +538,7 @@
 											.menu(
 													'enableItem',
 													tabMenu
-															.find("[name=close],[name=all],[name=other]"));
+															.find("[name=close]"));
 								} else {
 									tabMenu.menu('disableItem', tabMenu
 											.find("[name=close]"));
@@ -559,6 +560,9 @@
 
 				// 所有tabs
 				var tabs = $(tabSelector);
+				
+				//当前打开右键菜单的tab的索引
+				var curIndex=tabs.tabs('getTabIndex',curTab);
 
 				if (curTab) {
 					// 要关闭的tabs
@@ -573,6 +577,22 @@
 					} else if (item.name == "other") {
 						$.each(tabs.tabs("tabs"), function(i, tab) {
 							if (tab != curTab) {
+								closeTabs.push(tab);
+							}
+						});
+					}else if (item.name == "closeRight") {
+						$.each(tabs.tabs("tabs"), function(i, tab) {
+							var tabIndex=tabs.tabs('getTabIndex',tab);
+							console.info(tabIndex);
+							console.info(curIndex);
+							if (tabIndex > curIndex) {
+								closeTabs.push(tab);
+							}
+						});
+					}else if (item.name == "closeLeft") {
+						$.each(tabs.tabs("tabs"), function(i, tab) {
+							var tabIndex=tabs.tabs('getTabIndex',tab);
+							if (tabIndex < curIndex) {
 								closeTabs.push(tab);
 							}
 						});

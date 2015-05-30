@@ -1,5 +1,5 @@
 /**
- * EasyUIEx 1.3.0
+ * EasyUIEx 1.4.0
  * 
  * http://easyproject.cn
  * 
@@ -18,20 +18,9 @@
 			/*
 			 * ################# 消息内容和控制部分
 			 */
-			alertTitle : "操作提示", // 消息框的标题
-			confirmTitle : "确认提示", // 消息框的标题
-			promptTitle : "输入提示", // 消息框的标题
-			msgTitle : "消息提示", // 消息框的标题
 			showRowEditMsg : false, // 是否在行编辑完后提示msg
 			showRowAddMsg : false, // 是否在行添加完后提示msg
 			showRowDeleteMsg : true, // 是否在行删除完后提示msg
-			rowEditSuccessMsg : "修改成功！",
-			rowEditFailureMsg : "修改失败！",
-			rowAddSuccessMsg : "添加成功！",
-			rowAddFailureMsg : "添加失败！",
-			deleteConfirmMsg : "确定要删除吗？",
-			rowDeleteSuccessMsg : "删除成功！",
-			rowDeleteFailureMsg : "删除失败！",
 	        /*
 			 * ################# 自定义消息框的默认参数
 			 */
@@ -72,7 +61,12 @@
 	        /*
 			 * ################# url中使用{expression}表达式，解析时用到的正则
 			 */
-			expReg : /\{([\s\S]+?)\}/g
+			expReg : /\{([\s\S]+?)\}/g,
+			/*
+			 *  ################# 验证提示消息
+			 */
+			msg:{
+			}
 		};
 
 	/*
@@ -86,6 +80,17 @@
 	var dgHeaderMenu = {};
 	// 保存所有带复选框树加载的数据
 	var treeChkData = {};
+	
+	/**
+	 * 加载数据网格时，进行清理
+	 * @param datagridSelector 数据网格选择器
+	 * */
+	function clearOldDatagrid(datagridSelector){
+		var dgId = $(datagridSelector).attr("id");
+		dgLastEditIndex[dgId]=undefined;
+		dgLastEditType[dgId]=undefined;
+		dgHeaderMenu[dgId]=undefined;
+	}
 
 	/*
 	 * ################# 窗口对话框部分
@@ -665,6 +670,7 @@
 	 *            可选；datagrid初始化参数
 	 */
 	uiEx.initDatagrid = function(datagridSelector, params) {
+		clearOldDatagrid(datagridSelector);
 		var p = {};
 		$.extend(p, uiEx.dataGridDefaults, params);
 		$(datagridSelector).datagrid(p);
@@ -678,6 +684,7 @@
 	 *           可选；datagrid初始化参数
 	 */
 	uiEx.initEdatagrid = function(datagridSelector, params) {
+		clearOldDatagrid(datagridSelector);
 		var p = {};
 		$.extend(p, uiEx.dataGridDefaults, params);
 		$(datagridSelector).edatagrid(p);
@@ -693,6 +700,7 @@
 	 *            可选；其他参数，主要包括数据CRUD的url地址
 	 */
 	uiEx.initDetailDatagrid = function(datagridSelector, detailUrl, params) {
+		clearOldDatagrid(datagridSelector);
 		var dg = $(datagridSelector);
 		var p = {
 			view : detailview,

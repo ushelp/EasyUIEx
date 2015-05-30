@@ -27,8 +27,8 @@ jQuery EasyUI + EasyUIEx 的架构产生于企业开发实践，遵循Easy的原
     <!-- EasyUIEx -->
     <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
     <script type="text/javascript" src="easyuiex/easy.easyuiex.js"></script>
-    <!-- EasyUIEx的默认消息语言为中文，使用其他语言需要导入相应语言文件 -->
-    <!-- <script type="text/javascript" src="easyuiex/lang/easy.easyuiex-lang-en.js"></script> -->
+    <!-- 导入lang目录下相应语言文件 -->
+     <script type="text/javascript" src="easyuiex/lang/easy.easyuiex-lang-zh_CN.js"></script> -->
     ```
 
 3. EasyUIEx API 调用

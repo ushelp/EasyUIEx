@@ -27,7 +27,7 @@ jQuery EasyUI + EasyUIEx architecture produced in the enterprise development pra
     <!-- EasyUIEx -->
     <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
     <script type="text/javascript" src="easyuiex/easy.easyuiex.js"></script>
-    <!-- The default message language EasyUIEx for Chinese, use other languages need to import the appropriate language file -->
+    <!-- import the appropriate language file from lang directory -->
     <script type="text/javascript" src="easyuiex/lang/easy.easyuiex-lang-en.js"></script>
     ```
 

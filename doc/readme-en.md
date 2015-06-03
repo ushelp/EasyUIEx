@@ -671,7 +671,7 @@ $(function() {
 
 ## End
 
-[Comments](http://www.easyproject.cn/easyuiex/zh-cn/index.jsp#about 'Comments')
+[Comments](http://www.easyproject.cn/easyuiex/en/index.jsp#about 'Comments')
 
 If you have more comments, suggestions or ideas, please contact me.
 

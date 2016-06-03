@@ -30,7 +30,7 @@
     
     <!-- EasyUIEx -->
     <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-    <script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.0.0.js"></script>
+    <script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.1.0.js"></script>
     <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
     <!-- Use EasyUIEx of easy.jquery.edatagrid.js replaced jquery.edatagrid.js, easyUIEx of edatagrid performance and logic optimization and provides additional functionality. -->
     <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>

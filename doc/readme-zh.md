@@ -33,7 +33,7 @@
     
     <!-- EasyUIEx -->
     <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-    <script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.0.0.js"></script>
+    <script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.1.0.js"></script>
     <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
     <!-- 使用 EasyUIEx的 easy.jquery.edatagrid.js 代替 jquery.edatagrid.js，easyUIEx的edatagrid对性能和逻辑进行了优化，并提供附加功能。 -->
     <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>

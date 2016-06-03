@@ -1,7 +1,7 @@
 /**
  * EasyUIEx
  * 
- * Version 2.0.0
+ * Version 2.1.0
  * 
  * http://easyproject.cn https://github.com/ushelp
  * 
@@ -952,8 +952,12 @@
 									// 不包含在uiEx.globalDialogMap[title]中，则代表tab新创建的dialog，则销毁
 									if (globalDialogs.indexOf("#" + this.id
 											+ "#") == -1) {
-										$('#' + this.id)
-												.dialog('destroy', true);
+										
+										var dialogTemp=$('#' + this.id);
+										dialogTemp.dialog({
+											closed : true
+										})
+										dialogTemp.dialog('destroy', true);
 									}
 								})
 						// 清空globalDialogMap

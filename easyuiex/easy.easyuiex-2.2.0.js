@@ -1,7 +1,7 @@
 /**
  * EasyUIEx
  * 
- * Version 2.1.0
+ * Version 2.2.0
  * 
  * http://easyproject.cn https://github.com/ushelp
  * 
@@ -476,7 +476,8 @@
 				p.onHeaderContextMenu = showHeaderMenu;
 			}
 		}
-	};
+	}
+	;
 
 	/*
 	 * ################# EasyUIEx扩展函数
@@ -1842,6 +1843,29 @@
 
 		$(treegridSelector).treegrid(p);
 	}
+	/**
+	 * Treegird: parentId 方式的 Treegird 初始化
+	 * 
+	 * @param treegridSelector
+	 *            treegrid选择器
+	 * @param params
+	 *            可选；treegrid其他参数
+	 */
+	uiEx.initParentIdTreegrid = function(treegridSelector, params) {
+		if(params){
+			params.loadFilter=function(rows){
+				return uiEx.convert(rows);
+			}
+		}else{
+			params={
+					loadFilter:function(rows){
+						return uiEx.convert(rows);
+					}
+			}
+		}
+	
+		uiEx.initTreegrid(treegridSelector, params);
+	}
 
 	/**
 	 * 折叠目录
@@ -1884,6 +1908,7 @@
 	 *            默认选中值数组
 	 */
 	uiEx.initTreeChk = function(treeSelector, param, values) {
+
 		if (!param) {
 			param = {};
 		}
@@ -1986,6 +2011,32 @@
 
 		tree.tree(param);
 	}
+	
+	/**
+	 * 使用 ParentId 方式的复选框树初始化
+	 * 
+	 * @param treeSelector
+	 *            树选择器或对象
+	 * @param param
+	 *            树加载参数
+	 * @param values
+	 *            默认选中值数组
+	 */
+	uiEx.initParentIdTreeChk = function(treeSelector, param, values) {
+		if(param){
+			param.loadFilter=function(rows){
+				return uiEx.convert(rows);
+			}
+		}else{
+			param={
+				loadFilter:function(rows){
+					return uiEx.convert(rows);
+				}	
+			};
+		}
+		uiEx.initTreeChk(treeSelector, param, values);
+	}
+	
 	/**
 	 * 带复选框的树重置，配合uiEx.treeChk使用
 	 * 
@@ -2069,8 +2120,7 @@
 		var p = {
 			onClick : function(node) {
 				if (node.url) {
-					uiEx
-							.openTab(tabSelector, node.text, node.url,
+					uiEx.openTab(tabSelector, node.text, node.url,
 									node.iconCls);
 				}
 			}
@@ -2095,6 +2145,33 @@
 		$.extend(p, params);
 		$(treeSelector).tree(p);
 	}
+	
+	/**
+	 * Tree: parentId类型tree初始化，包含两大默认功能： 
+	 * 1. 点击菜单父节点打开子节点功能 2. 点击菜单在tabSelector指定的tab打开
+	 * 
+	 * @param treeSelector
+	 *            datagrid选择器
+	 * @param tabSelector
+	 *            打开树菜单url的tab选择器
+	 * @param params
+	 *            可选；tree初始化参数
+	 */
+	uiEx.initParentIdTree = function(treeSelector, tabSelector, params) {
+		
+		if(params){
+			params.loadFilter=function(rows){
+				return uiEx.convert(rows);
+			}
+		}else{
+			params={
+				loadFilter:function(rows){
+					return uiEx.convert(rows);
+				}	
+			};
+		}
+		uiEx.initTree(treeSelector, tabSelector, params);
+	}
 
 	/**
 	 * onSelect事件处理：Tree的onSelect事件的实现，能实现点击菜单父节点打开子节点功能 在树初始化时通过注册onSelect事件传入
@@ -2108,11 +2185,58 @@
 	uiEx.expandChilds = function(node) {
 		$(this).tree('toggle', node.target);
 	}
-
+	
+	
 	/*
 	 * ################# 其他函数
 	 */
-
+	/**
+	 * parentId tree 数据转换
+	 * loadFilter:function(rows){
+	 * 		return uiEx.convert(rows);
+	 * 	}
+	 * 
+	 */
+	uiEx.convert =function(rows){
+		function exists(rows, parentId){
+	
+			for(var i=0; i<rows.length; i++){
+				if (rows[i].id == parentId) return true;
+			}
+			return false;
+		}
+		
+		var nodes = [];
+		// get the top level nodes
+		for(var i=0; i<rows.length; i++){
+			var row = rows[i];
+			if (!exists(rows, row.parentId)){
+				nodes.push(row);
+			}
+		}
+		
+		var toDo = [];
+		for(var i=0; i<nodes.length; i++){
+			toDo.push(nodes[i]);
+		}
+		while(toDo.length){
+			var node = toDo.shift();	// the parent node
+			// get the children nodes
+			for(var i=0; i<rows.length; i++){
+				var row = rows[i];
+				if (row.parentId == node.id){
+					var child = row;
+					if (node.children){
+						node.children.push(child);
+					} else {
+						node.children = [child];
+					}
+					toDo.push(child);
+				}
+			}
+		}
+		return nodes;
+	}
 	/**
 	 * 将变量uiEx的控制权让渡给第一个实现它的那个库
 	 * 
@@ -2340,17 +2464,27 @@
 					});
 				},
 				/**
-				 * DetailDataGrid:
-				 * DetailDataGrid初始化，包含了detailDataGridDefaults参数的默认值
+				 * Treegrid:
+				 * Treegrid初始化
 				 * 
-				 * @param detailUrl
-				 *            加载详细视图的url
 				 * @param params
 				 *            其他参数，主要包括数据CRUD的url地址
 				 */
 				initTreegrid : function(params) {
 					return this.each(function(i, v) {
 						uiEx.initTreegrid(this, params);
+					});
+				},
+				/**
+				 * Treegrid:
+				 * parentId 方式 Treegrid 初始化
+				 * 
+				 * @param params
+				 *            其他参数，主要包括数据CRUD的url地址
+				 */
+				initParentIdTreegrid : function(params) {
+					return this.each(function(i, v) {
+						uiEx.initParentIdTreegrid(this, params);
 					});
 				},
 				/**
@@ -2538,7 +2672,7 @@
 					});
 				},
 				/**
-				 * tree:复选框树初始化
+				 * tree: parentId 方式的复选框树初始化
 				 * 
 				 * @param param
 				 *            树加载参数
@@ -2548,6 +2682,19 @@
 				initTreeChk : function(param, values) {
 					return this.each(function(i, v) {
 						uiEx.initTreeChk(this, param, values);
+					});
+				},
+				/**
+				 * tree:复选框树初始化
+				 * 
+				 * @param param
+				 *            树加载参数
+				 * @param values
+				 *            默认选中值
+				 */
+				initParentIdTreeChk : function(param, values) {
+					return this.each(function(i, v) {
+						uiEx.initParentIdTreeChk(this, param, values);
 					});
 				},
 				/**
@@ -2562,6 +2709,20 @@
 				initTree : function(tabSelector, params) {
 					return this.each(function(i, v) {
 						uiEx.initTree(this, tabSelector, params)
+					});
+				},
+				/**
+				 * Tree: tree初始化，包含两大默认功能： 1. 点击菜单父节点打开子节点功能 2.
+				 * 点击菜单在tabSelector指定的tab打开
+				 * 
+				 * @param tabSelector
+				 *            打开树菜单url的tab选择器
+				 * @param params
+				 *            可选；tree初始化参数
+				 */
+				initParentIdTree : function(tabSelector, params) {
+					return this.each(function(i, v) {
+						uiEx.initParentIdTree(this, tabSelector, params)
 					});
 				},
 				/**

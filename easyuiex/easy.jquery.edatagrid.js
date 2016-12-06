@@ -112,11 +112,12 @@
 				
 				var row2={};
 				
-				if(opts.sendRowDataPrefix){
-					$.each(row,function(i,v){
-						row2[opts.sendRowDataPrefix+i]=row[i];
-					});
+				if(opts.sendRowDataPrefix==undefined){
+					opts.sendRowDataPrefix="";
 				}
+				$.each(row,function(i,v){
+					row2[opts.sendRowDataPrefix+i]=row[i];
+				});
 				
 				if (url){
 					
@@ -147,6 +148,7 @@
 							row2.page=opts.pageNumber;
 						}
 					}
+
 					$.ajax({
 						url : url, // 请求的URL
 						type : method, // 请求方式(POST、GET），默认GET
@@ -384,6 +386,7 @@
 //					$(currTarget).edatagrid('saveRow');
 //					currTarget = this;
 //				}
+
 				if (opts.autoSave){
 					currTarget = this;
 				}
@@ -501,11 +504,9 @@
 							var idValue = row[opts.idField||'id'];
 							var row2={};
 							
-							if(opts.sendRowDataPrefix){
-								$.each(row,function(i,v){
-									row2[opts.sendRowDataPrefix+i]=row[i];
-								});
-							}
+							$.each(row,function(i,v){
+								row2[opts.sendRowDataPrefix+i]=row[i];
+							});
 							
 							var method="post";
 							var showMsg=opts.showMsg;

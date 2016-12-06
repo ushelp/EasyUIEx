@@ -2,91 +2,88 @@
 
 ---------------
 
-**jQuery EasyUI + EasyUIEx **architecture produced in the enterprise development practices, Easy to follow the principle goal is to simplify everything can simplify part, do not have to provide extended to all the needs. CRUD focus on aspects of the package extensions are also welcome to join the essence of more development practices.
+**jQuery EasyUI + EasyUIEx** architecture produced in the enterprise development practices, Easy to follow the principle goal is to simplify everything can simplify part, do not have to provide extended to all the needs. CRUD focus on aspects of the package extensions are also welcome to join the essence of more development practices.
 
-### [HTML EasyUIEx Manual](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_en.html 'HTML EasyUIEx Manual')
+[HTML EasyUIEx Manual](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_en.html 'HTML EasyUIEx Manual')
 
-[Official Homepage](http://www.easyproject.cn/easyuiex/en/index.jsp 'Official Homepage')
 
-##  1. EasyUIEx Use steps:
+##  1. Download:
 
-1. Include easyuiex directory in the project (including the easyuiex required css, images, js)
+With the use of `easy.jquery.edatagrid.js` instead of` jquery.edatagrid.js`, easyUIEx of edatagrid performance and logic optimization and provides additional functionality.
 
-2. Include static resources required for the project in the page (`jQuery`,` jQuery EasyUI`, `EasyUIEx`)
- > With the use of `easy.jquery.edatagrid.js` replace` jquery.edatagrid.js`, easyUIEx of edatagrid performance and logic optimization and provides additional functionality.
- 
-    ```HTML
-    <!-- EasyUI CSS -->
-    <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css" id="themeLink">
-    <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
-    
-    <!-- EasyUI JS & Extension JS-->
-    <script type="text/javascript" src="easyui/jquery.min.js"></script>
-    <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
-    <script type="text/javascript" src="easyui/datagrid-dnd.js"></script>
-    <script type="text/javascript" src="easyui/jquery.edatagrid.js"></script>
-    <script type="text/javascript" src="easyui/datagrid-detailview.js"></script>
-    
-    <!-- EasyUIEx -->
-    <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-    <script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.1.0.js"></script>
-    <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
-    <!-- Use EasyUIEx of easy.jquery.edatagrid.js replaced jquery.edatagrid.js, easyUIEx of edatagrid performance and logic optimization and provides additional functionality. -->
-    <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>
-    <!-- Importing files in the appropriate language lang directory -->
-     <script type="text/javascript" src="easyuiex/lang/easy.easyuiex-lang-en.js"></script> -->
-    ```
+```HTML
+<!-- EasyUI CSS -->
+<link rel="stylesheet" type="text/css" href="easyui/themes/bootstrap/easyui.css" id="themeLink">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+
+<!-- EasyUI JS & Extension JS...-->
+<script type="text/javascript" src="easyui/jquery.min.js"></script>
+<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+
+<!-- **EasyUIEx** -->
+<link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
+<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.0.js"></script>
+<script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
+<!-- EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' -->
+<script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>
+<!-- Language file -->
+<script type="text/javascript" src="easyuiex/lang/easy.easyuiex-lang-zh_CN.js"></script> 
+```
 
 ## 2. EasyUIEx API Invoke
 
-   **uiEx is the default namespace name EasyUIEx of. EasyUIEx API for DOM operation in extended function with selector selectors are supported calls in two ways.**
+**uiEx** is the default namespace name EasyUIEx of. EasyUIEx API for DOM operation in extended function with selector selectors are supported calls in two ways.
 
-   > Note: Due to EasyUIEx internal package `datagrid`,` tree` and other certain DOM objects used to `` id attributes of the object, so these DOM elements must have a unique `` id attribute. Priority recommend using the ID selector to select DOM elements.
-
-   - Namespace called directly: in the first argument passed to the operation of the DOM object or object selector
+> **Note: Please set id attribute for dom element. ** 
    
-     **uiEx.{methodName}(`selector`, [param1], ....);** 
+- **Directly within uiEx namespace**
+ 
+   The first argument is dom selector.
+ 
+   `uiEx.{methodName}(selector, [param1], ....);` 
+   
+    ```JavaScript
+   uiEx.clearForm('#userForm')；
 
-     ```javascript
-      // Method One: uiEx namespace calls
-      uiEx.clearForm('#userForm')；
-      
-      uiEx.treeChk(
-      	"#rightsTree",
-      	{
-      		url:"do/menuJson.jsp"
-      	},
-      	[11]
-      );
-      ```
-
-   - jQuery object extension calls: Using jQuery object directly call methods
+   uiEx.treeChk(
+     "#rightsTree",
+     {
+        url:"do/menuJson.json"
+     },
+     [11]
+   );
+   ```
+   
+- **Within jQuery function extend**
+ 
+   `$(selector).{methodName}([param1], ....);`
   
-     **$(`selector`).{methodName}([param1], ....);**
-
-     ```javascript
-      // Method two: jQuery object extension call
-      $('#userForm').clearForm();
+    ```JavaScript
+    $('#userForm').clearForm();
   
-      $("#rightsTree").treeChk(
-          {
-              url:"do/menuJson.jsp"
-          },
-          [11]
-      );
-     ```
+    $("#rightsTree").treeChk(
+        {
+            url:"do/menuJson.json"
+        },
+        [11]
+    );
+    ```
 
 
 ##  3. EasyUIEx API：
  
-#### 1. Global configuration parameters
+### 3.1. Global configuration parameters
 
-- Message international configuration
-Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
+- **Message international configuration**
 
-- Global configuration parameters can be adjusted EasyUIEx operating parameters, methods and content, modify parameters:
-`uiEx.{paramName} = paramValue`
+ Modify in lang / easy.easyuiex-lang-`LANG_COUNTRY`.js
+
+- **Global configuration parameters**
+
+ can be adjusted EasyUIEx operating parameters, methods and content, modify parameters:
+ 
+ `uiEx.{paramName} = paramValue`
 
   See note specific role, the following default configuration:
   ```javascript
@@ -145,7 +142,8 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
   };
   ```
   
-  #### 2. Messager API
+### 3.2. Messager API
+  
   ```javascript
   /**
    * alert
@@ -182,7 +180,7 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
   uiEx.msg(msg, position, params);
   ```
 
-#### 3. dialog API
+### 3.3 dialog API
 
 - Two ways to call
 
@@ -225,7 +223,7 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
  ```
 
 
-#### 4. form API
+### 3.4. form API
 
 - Two ways to call
 
@@ -344,7 +342,7 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
  ```
 
 
-#### 5. tabs API
+### 3.5. tabs API
 
 - Two ways to call
 
@@ -361,6 +359,7 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
      - A reference to the page can not have a body, otherwise the loaded content inside of JS file execution grammar
      - Html rendering prompt resolution displays
  - Context menu HTML snippet:
+ 
     ```HTML
     <%-- ##################Tab Tab context menu can not be deleted################## --%>
     <div id="tabsMenu" class="easyui-menu" style="width:120px;">
@@ -374,7 +373,9 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
           <div name="refresh"  data-options="iconCls:'icon-reload'">refresh</div> 
     </div>
     ```
-  - api
+    
+  - API
+  
       ```javascript
       /**
        * Add a tab for a specified Tab, supports double-click to close
@@ -446,14 +447,14 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
 
 - Two ways to call
 
-- ** Package and extended **: EasyUIEx related components for the use of datagrid depth CRUD application package, provides additional functionality, when you call the  Initialization method, with the incoming `url`,` saveUrl`, `updateUrl`,` destroyUrl` address and other CRUD server operating parameters (and edatagrid the parameters remain the same), can be in a consistent manner by means of API EasyUIEx complete CRUD operations.
+- **Package and extended**: EasyUIEx related components for the use of datagrid depth CRUD application package, provides additional functionality, when you call the  Initialization method, with the incoming `url`,` saveUrl`, `updateUrl`,` destroyUrl` address and other CRUD server operating parameters (and edatagrid the parameters remain the same), can be in a consistent manner by means of API EasyUIEx complete CRUD operations.
 
-- ** Performance Optimization **: the datagrid and edatagrid provides line editing condition monitoring, optimization request to modify. When line editing, column editing, does not submit a request unmodified content.
+- **Performance Optimization**: the datagrid and edatagrid provides line editing condition monitoring, optimization request to modify. When line editing, column editing, does not submit a request unmodified content.
 
 
 - datagrid、edatagrid、detaildatagrid、treegrid Extended Attributes common
 
-| Name | Type | Description | Default |
+ | Name | Type | Description | Default |
 | ----------- | ------------ | ----------- | ----------- |
 | url  | string | Query url; get:`dg.datagrid("options").url` | false |
 | saveUrl  | string | Save url；get：`dg.datagrid("options").saveUrl` | false |
@@ -470,27 +471,27 @@ Modify in `lang / easy.easyuiex-lang-LANG_COUNTRY.js`.
 
 - datagrid、edatagrid Extended Attributes common
 
-| Name | Type | Description | Default |
+ | Name | Type | Description | Default |
 | ----------- | ------------ | ----------- | ----------- |
 | sendRowDataPrefix  | boolean | Add, delete, update data, support setting submitting row data prefix `sendRowDataPrefix:". SysUser "`, before the data parameter names such submission will increase the specified prefix, handy when using the Struts framework such as submitting data to sysUser object reception  | &nbsp; |
 
 
 - datagrid
 
-| Name | Type | Description | Default |
+ | Name | Type | Description | Default |
 | ----------- | ------------ | ----------- | ----------- |
 | clickRowEdit  | boolean | When you click to achieve line editing in DataGrid, you can replace edatagrid achieve with line editing datagrid | false |
 | clickCellEdit  | boolean | Click column editing function is turned on  | false |
 
 - edatagrid Extended Attributes
-**Use `easy.jquery.edatagrid.js` replace` jquery.edatagrid.js`, easyUIEx of edatagrid performance and logic optimization, and provide additional functionality**。
+**Use `easy.jquery.edatagrid.js` instead of ` jquery.edatagrid.js`, easyUIEx of edatagrid performance and logic optimization, and provide additional functionality**。
 
-| Name | Type | Description | Default |
+ | Name | Type | Description | Default |
 | ----------- | ------------ | ----------- | ----------- |
 | clickEdit  | boolean | Whether to open, click Edit (edatagrid default double-click to open editor)  | false |
 | showMsg  | boolean | Whether to add, modify alert message  | false |
 
-- ### Demo
+- Demo
 
  ```javascript
  // datagrid  Initialization
@@ -588,11 +589,11 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
 });
  ```
 
-- ### API
+- API
 
  - grid  Initialization API
  
- ```javascript
+   ```javascript
  /**
   * DataGrid: datagrid Initialization, It contains the default parameters uiEx.dataGridDefaults
   * 
@@ -631,7 +632,7 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
 
  - datagrid CRUD API
 
- ```javascript
+   ```javascript
  /*
  * ############## DataGrid CRUD
  */
@@ -680,7 +681,7 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
 
  - DetailDataGrid API
 
- ```JS 
+   ```JS 
   /**
    * DetailDataGrid: DetailDataGrid add the line
    * 
@@ -710,7 +711,7 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
 
  - Edatagrid API
 
- ```JS
+   ```JS
 	/**
 	 * edatagrid, start editing, direct Click Edit, do not need to double-click to open the Edit
 	 * 
@@ -729,19 +730,24 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
 ```
 
 
-#### 7. treegrid API
+### 3.7. treegrid API
+
 - Two ways to call
+
+- Supports tree rendering using the `parentId` attribute
+> EasyUI The default tree constructs use the `children array`. EasyUIEx allows the `parentId attribute` to be used to represent and render tree components.
 
 - Extended Attributes
 
-| Name | Type | Description | Default |
+ | Name | Type | Description | Default |
 | ----------- | ------------ | ----------- | ----------- |
 | showHeaderContextMenu  | boolean | Whether the meter display the context menu, choose to display a column  | false |
 | showContextMenu  | boolean | Whether to display the context menu, with menuSelector property use  | false |
 | menuSelector  | string | Menu Selector  | &nbsp; |
 
 - Demo
-```JS
+
+ ```JS
 $("#sysMenuPermissionDataGrid").initTreegrid({
 	url : 'sysMenuPermission_list.action',
 	rownumbers : true,
@@ -758,7 +764,8 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
 	showContextMenu : true
 });
 ```
-```HTML
+
+ ```HTML
 <!-- Collapse and expand the current directory -->
 <div id="sysMenuRightContextMenu" class="easyui-menu" style="width:120px;">
 	<div onclick="uiEx.collapse('#sysMenuRightDataGrid')">Collapse</div>
@@ -766,7 +773,7 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
 </div>
 ```
 
-- api
+- API
 
   ```JS
   /**
@@ -778,6 +785,16 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
   *            Optional; treegrid other parameters
   */
   uiEx.initTreegrid(treegridSelector, params)
+
+  /**
+  * Treegird: Use parentId attribute rendering Treegird Initialization
+  * 
+  * @param treegridSelector
+  *            
+  * @param params
+  *            Optional; treegrid other parameters
+  */
+  uiEx.initParentIdTreegrid(treegridSelector, params)
   
   /**
   * Collapse the select folder
@@ -794,20 +811,23 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
   uiEx.expand(treeGridSelector);
   ```
 
-#### 8. tree API
+#### 3.8. tree API
 
 - Two ways to call
+
+- Supports tree rendering using the `parentId` attribute
 
 - Support Tabs binding
 
 - Extended Attributes
 
-| Name | Type | Description | Default |
+ | Name | Type | Description | Default |
 | ----------- | ------------ | ----------- | ----------- |
 | expandChilds  | boolean | Click to expand menu parent child node function  | false |
 
 - Demo
-```javascript
+
+  ```javascript
 //Common tree menu Initialization
 uiEx.initTree(
 	"#menu",  //Tree menu selector
@@ -827,6 +847,7 @@ uiEx.initTree(
   ```
 
 - API
+
   ```javascript
   /*
   * ############## Tree 
@@ -843,6 +864,18 @@ uiEx.initTree(
    */
   uiEx.initTree(treeSelector, tabSelector, params);
   
+    /**
+   * Tree: Use parentId attribute rendering tree Initialization, contains two default functionality:
+   * 1. Click on the menu to open the parent node child node function
+   * 2. Click on the menu open in tabSelector specified tab
+   * 3. tab, double-click to close
+   * 
+   * @param treeSelector
+   * @param tabSelector  Open the menu tree url of tab selector
+   * @param params Optional; tree Initialization parameters
+   */
+  uiEx.initParentIdTree(treeSelector, tabSelector, params);
+  
   /**
    * onSelect event processing: achieving Tree of onSelect event, to achieve click menu to open the parent node when the child node function tree Initialization incoming event by registering onSelect
    * onSelect : uiEx.expandChilds, //Click to open the sub-menu parent node functionality
@@ -857,6 +890,7 @@ uiEx.initTree(
   ```
 
 - Binding tabs associated API
+
   ```javascript
   /*
   * ############## Tree Menu open to tab
@@ -881,13 +915,15 @@ uiEx.initTree(
   ```
 
 
-#### 9 Checkbox tree（Checkbox Tree）
+### 3.9. Checkbox tree API
 
 - Two ways to call
 
+- Supports tree rendering using the `parentId` attribute
+
 - Extended Attributes
 
-| Name |	Type |	Description |	Default |
+ | Name |	Type |	Description |	Default |
 | ----------- | ------------ | ----------- | ----------- |
 |showTitle |	string |	Mouse serving individual title prompts, you can specify the attributes displayed |	 &nbsp; |
 |noChildCascadeCheck |	boolean |	Cascade Select parent, but the parent does not cascade selected select child nodes. And cascadeCheck: true will cause the parent node is selected automatically select all child nodes. | 	false |
@@ -968,6 +1004,15 @@ uiEx.initTree(
  */
  uiEx.initTreeChk(treeSelector, param, values);
  
+  /**
+ * Use parentId attribute renderingCheckbox tree Initialization
+ * 
+ * @param treeSelector tree selector or dom
+ * @param param tree loading parameters 
+ * @param values The default value of the array is selected
+ */
+ uiEx.initParentIdTreeChk(treeSelector, param, values);
+ 
  /**
  * Tree with check boxes reset, with uiEx.treeChk use
  * 
@@ -1001,10 +1046,10 @@ uiEx.initTree(
  uiEx.getCheckedInfos(treeSelector, propertyArray);
  ```
 
-### 10. Custom validator
+### 3.10. Custom validator
 - Because authentication scenario and rules vary, according to the need to expand `easy.easyuiex-validate.js`, register the custom validator.
 
-- DEMO：
+- Demo：
   ```HTML
   <input id="renewpwd" name="renewpwd" class="easyui-textbox" 
   type="password"  
@@ -1045,13 +1090,21 @@ uiEx.initTree(
   ```
 
 
-#### 11. Other API
+### 3.11. Other API
+
 ```javascript
 /**
  * The control variable uiEx of transfer to first realize that its library
  * @return Object reference uiEx
  */
 uiEx.noConflict();
+
+/*
+ * The parentId type tree generates a transform function that is called in the loadFilter function of the tree component
+ */
+loadFilter:function(rows){
+	uiEx.convert(rows);
+}
 ```
 
 
@@ -1062,11 +1115,23 @@ uiEx.noConflict();
 
 
 
-## End
 
-[Comments](http://www.easyproject.cn/easyuiex/en/index.jsp#about 'Comments')
+## END
+### [The official home page](http://www.easyproject.cn/easyuiex/en/index.jsp 'The official home page')
+
+[Comments](http://www.easyproject.cn/easyuiex/en/index.jsp#donation 'Comments')
 
 If you have more comments, suggestions or ideas, please contact me.
+
+
+### [官方主页](http://www.easyproject.cn/easyuiex/zh-cn/index.jsp '官方主页')
+
+[留言评论](http://www.easyproject.cn/easyuiex/zh-cn/index.jsp#donation '留言评论')
+
+如果您有更好意见，建议或想法，请联系我。
+
+
+
 
 Email：<inthinkcolor@gmail.com>
 

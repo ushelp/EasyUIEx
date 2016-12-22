@@ -1,7 +1,7 @@
 /**
  * EasyUIEx
  * 
- * Version 2.2.1
+ * Version 2.2.2
  * 
  * http://easyproject.cn https://github.com/ushelp
  * 
@@ -727,6 +727,9 @@
 	 * @return form对象
 	 */
 	uiEx.loadForm = function(selector, data, prefix) {
+		if(!prefix){
+			prefix="";
+		}
 		var data2 = {};
 		$.each(data, function(i, v) {
 			data2[prefix + i] = v;

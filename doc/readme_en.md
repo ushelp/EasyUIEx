@@ -4,7 +4,7 @@
 
 **jQuery EasyUI + EasyUIEx** architecture produced in the enterprise development practices, Easy to follow the principle goal is to simplify everything can simplify part, do not have to provide extended to all the needs. CRUD focus on aspects of the package extensions are also welcome to join the essence of more development practices.
 
-[HTML EasyUIEx Manual](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_en.html 'HTML EasyUIEx Manual')
+[English API online](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_en.html 'EasyUIEx English API online')
 
 
 ##  1. Download:
@@ -23,7 +23,7 @@ With the use of `easy.jquery.edatagrid.js` instead of` jquery.edatagrid.js`, eas
 
 <!-- **EasyUIEx** -->
 <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.2.js"></script>
+<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.3.js"></script>
 <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
 <!-- EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' -->
 <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>
@@ -71,7 +71,12 @@ With the use of `easy.jquery.edatagrid.js` instead of` jquery.edatagrid.js`, eas
     ```
 
 
+
 ##  3. EasyUIEx API：
+
+### API online
+
+[English API online](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_en.html)
  
 ### 3.1. Global configuration parameters
 
@@ -451,6 +456,21 @@ With the use of `easy.jquery.edatagrid.js` instead of` jquery.edatagrid.js`, eas
 
 - **Performance Optimization**: the datagrid and edatagrid provides line editing condition monitoring, optimization request to modify. When line editing, column editing, does not submit a request unmodified content.
 
+- **rowData returns the parameter**: 
+
+	When adding or modifying data, you can return a `rowData` attribute in the` JSON` response, and EasyUIEx automatically refreshes the static data for the page that was added or edited based on the contents of `rowData`.
+	
+	For example, when adding data, if the current data primary key is submitted to the server side after the generation (such as the data key by the automatic growth generator control), add data, in the return of `JSON` set a **rowData** Property, which returns the most recent data that contains the `primary key id attribute` (other properties are optionally optional if no refresh is required) to automatically refresh the newly added front row. **Otherwise, after the new data, delete the data, you have previously added data in the client does not have the primary key, there will be a failure to delete tips.**
+
+	```JSON
+	{
+		"msg":"Save  Successed!",
+		"locationUrl":"",
+		"callback":"",
+		"statusCode":200,
+		"rowData":{"deptno":10,"dname":"x","loc":"x"} // Returns the auto increment primary key to update the client data
+	}
+	```
 
 - datagrid、edatagrid、detaildatagrid、treegrid Extended Attributes common
 
@@ -672,7 +692,8 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
   *            可Selected; the string value, perform a successful return to the mark key, value must be the same as before representatives successValue deleted successfully
   * @param successValue
   *            Optional; String value, execution marks the successful return value
-  *  
+  * @param callback
+  *            Optional; After the successful implementation of the callback function, the server-side parameters for the return of data
   *  - demo：
   *  dg.rowDelete(true, false, "statusCode", "200");
   */
@@ -1112,7 +1133,7 @@ loadFilter:function(rows){
 
 [EasyUIEx demo online](http://www.easyproject.cn/easyUIExDemo 'EasyUIEx demo')
 
-
+[EasyEE](http://www.easyproject.cn/easyee 'EasyEE')
 
 
 

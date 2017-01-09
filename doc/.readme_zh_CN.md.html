@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\workspace-sts-3.8.1.RELEASE\easyUIExDemo\WebRoot\github\doc\.readme_zh_CN.md.html</title>
+<title>D:\workspace-sts-3.8.1.RELEASE\easyUIExDemo\github\doc\.readme_zh_CN.md.html</title>
 
 
 <style type="text/css">
@@ -642,26 +642,26 @@ function setDocumentScrollTop(ypos)
 <h1> <a id="easyuiex-使用手册" class="anchor" href="#easyuiex-%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EasyUIEx 使用手册</h1> 
 <hr /> 
 <p><strong>jQuery EasyUI + EasyUIEx</strong> 的架构产生于企业开发实践，遵循Easy的原则，目标是简化一切可以简化的部分，为一切不具备的需求提供扩展。着重在CRUD方面进行了封装扩展，也欢迎更多开发实践的精华加入。</p> 
-<p><a href="http://www.easyproject.cn/easyuiex/doc/easyuiex-api_zh_CN.html" title="HTML EasyUIEx 使用手册">HTML 使用手册</a></p> 
+<p><a href="http://www.easyproject.cn/easyuiex/doc/easyuiex-api_zh_CN.html" title="EasyUIEx 中文 API 在线速览">中文 API 在线速览</a></p> 
 <h2> <a id="1-下载使用" class="anchor" href="#1-%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. 下载使用</h2> 
 <p>使用<code>easy.jquery.edatagrid.js</code>替换<code>jquery.edatagrid.js</code>，easyUIEx的edatagrid对性能和逻辑进行了优化，并提供附加功能。</p> 
 <div class="highlight highlight-text-html-basic">
- <pre><span class="pl-c">&lt;!-- EasyUI CSS --&gt;</span>
+ <pre><span class="pl-c"><span class="pl-c">&lt;!--</span> EasyUI CSS <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>stylesheet<span class="pl-pds">&quot;</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/css<span class="pl-pds">&quot;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui/themes/bootstrap/easyui.css<span class="pl-pds">&quot;</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>themeLink<span class="pl-pds">&quot;</span></span>&gt;
 &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>stylesheet<span class="pl-pds">&quot;</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/css<span class="pl-pds">&quot;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui/themes/icon.css<span class="pl-pds">&quot;</span></span>&gt;
 
-<span class="pl-c">&lt;!-- EasyUI JS &amp; Extension JS...--&gt;</span>
+<span class="pl-c"><span class="pl-c">&lt;!--</span> EasyUI JS &amp; Extension JS...<span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui/jquery.min.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui/jquery.easyui.min.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui/locale/easyui-lang-zh_CN.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 
-<span class="pl-c">&lt;!-- **EasyUIEx** --&gt;</span>
+<span class="pl-c"><span class="pl-c">&lt;!--</span> **EasyUIEx** <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>stylesheet<span class="pl-pds">&quot;</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/css<span class="pl-pds">&quot;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/css/easyuiex.css<span class="pl-pds">&quot;</span></span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.easyuiex.min-2.2.2.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.easyuiex.min-2.2.3.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.easyuiex-validate.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-<span class="pl-c">&lt;!-- EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' --&gt;</span>
+<span class="pl-c"><span class="pl-c">&lt;!--</span> EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.jquery.edatagrid.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-<span class="pl-c">&lt;!-- Language file --&gt;</span>
+<span class="pl-c"><span class="pl-c">&lt;!--</span> Language file <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/lang/easy.easyuiex-lang-zh_CN.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt; </pre>
 </div> 
 <h2> <a id="2-easyuiex-api-调用" class="anchor" href="#2-easyuiex-api-%E8%B0%83%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. EasyUIEx API 调用</h2> 
@@ -695,100 +695,102 @@ function setDocumentScrollTop(ypos)
   </div> </li> 
 </ul> 
 <h2> <a id="3-api-详解" class="anchor" href="#3-api-%E8%AF%A6%E8%A7%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. API 详解</h2> 
+<h3> <a id="在线-api-速览" class="anchor" href="#%E5%9C%A8%E7%BA%BF-api-%E9%80%9F%E8%A7%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>在线 API 速览</h3> 
+<p><a href="http://www.easyproject.cn/easyuiex/doc/easyuiex-api_zh_CN.html">中文 API 在线速览</a></p> 
 <h3> <a id="31-全局配置" class="anchor" href="#31-%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.1. 全局配置</h3> 
 <ul> 
  <li> <p><strong>消息国际化配置</strong></p> <p>在 lang/easy.easyuiex-lang-<code>LANG_COUNTRY</code>.js 中修改</p> </li> 
  <li> <p><strong>全局配置参数</strong></p> <p>可以调整 EasyUIEx 的运行参数、方式和内容，修改参数。</p> <p><code>uiEx.{paramName} = paramValue</code></p> <p>默认配置：</p> 
   <div class="highlight highlight-source-js">
    <pre><span class="pl-k">var</span> uiEx <span class="pl-k">=</span> {
-  <span class="pl-c">/*</span>
+  <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">   * ################# 消息内容和控制部分</span>
-<span class="pl-c">   */</span>
-  showRowEditMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c">// 是否在行编辑完后提示msg</span>
-  showRowAddMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c">// 是否在行添加完后提示msg</span>
-  showRowDeleteMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 是否在行删除完后提示msg</span>
-  <span class="pl-c">/*</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
+  showRowEditMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c"><span class="pl-c">//</span> 是否在行编辑完后提示msg</span>
+  showRowAddMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c"><span class="pl-c">//</span> 是否在行添加完后提示msg</span>
+  showRowDeleteMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 是否在行删除完后提示msg</span>
+  <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">   * ################# 自定义消息框的默认参数</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   msgDefaults <span class="pl-k">:</span> {
       timeout <span class="pl-k">:</span> <span class="pl-c1">4000</span>,
-      showType <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>slide<span class="pl-pds">'</span></span> <span class="pl-c">// null、slide、fade、show。默认是 slide。</span>
-  <span class="pl-c">// width:250,</span>
-  <span class="pl-c">// height:100,</span>
+      showType <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>slide<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">//</span> null、slide、fade、show。默认是 slide。</span>
+  <span class="pl-c"><span class="pl-c">//</span> width:250,</span>
+  <span class="pl-c"><span class="pl-c">//</span> height:100,</span>
 
   },
-  <span class="pl-c">/*</span>
+  <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">   * ################# 数据网格默认参数</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   dataGridDefaults <span class="pl-k">:</span> {
-      rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 显示行号</span>
-      fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 自动扩展或收缩列的大小以适应网格宽度和防止水平滚动条</span>
-      singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 单选</span>
-      pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 显示分页</span>
-      method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c">// 提交方式</span>
+      rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 显示行号</span>
+      fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 自动扩展或收缩列的大小以适应网格宽度和防止水平滚动条</span>
+      singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 单选</span>
+      pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 显示分页</span>
+      method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span> 提交方式</span>
       striped <span class="pl-k">:</span> <span class="pl-c1">true</span>
-  <span class="pl-c">// 表格条纹，奇偶行颜色交替</span>
+  <span class="pl-c"><span class="pl-c">//</span> 表格条纹，奇偶行颜色交替</span>
   },
-  <span class="pl-c">/*</span>
+  <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">   * ################# 数据网格详细视图默认参数</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   detailDataGridDefaults <span class="pl-k">:</span> {
-      rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 显示行号</span>
-      fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 自动扩展或收缩列的大小以适应网格宽度和防止水平滚动条</span>
-      singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 单选</span>
-      pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 显示分页</span>
-      method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c">// 提交方式</span>
-      striped <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 表格条纹，奇偶行颜色交替</span>
-      <span class="pl-c">// 返回行明细内容的格式化函数</span>
+      rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 显示行号</span>
+      fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 自动扩展或收缩列的大小以适应网格宽度和防止水平滚动条</span>
+      singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 单选</span>
+      pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 显示分页</span>
+      method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span> 提交方式</span>
+      striped <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 表格条纹，奇偶行颜色交替</span>
+      <span class="pl-c"><span class="pl-c">//</span> 返回行明细内容的格式化函数</span>
       <span class="pl-en">detailFormatter</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">index</span>, <span class="pl-smi">row</span>) {
           <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;div class=&quot;ddv&quot;&gt;&lt;/div&gt;<span class="pl-pds">'</span></span>;
       }
   },
-  <span class="pl-c">/*</span>
+  <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">   * ################# url中使用{expression}表达式，解析时用到的正则</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   expReg <span class="pl-k">:</span><span class="pl-sr"> <span class="pl-pds">/</span><span class="pl-cce">\{</span>(<span class="pl-c1">[<span class="pl-c1">\s\S</span>]</span><span class="pl-k">+?</span>)<span class="pl-cce">\}</span><span class="pl-pds">/</span>g</span>,
-  <span class="pl-c">/*</span>
+  <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">   * ################# 验证提示消息</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   msg <span class="pl-k">:</span> {}
 };</pre>
   </div> </li> 
 </ul> 
 <h3> <a id="32-alter-confirm-prompt-msg-消息窗口相关函数" class="anchor" href="#32-alter-confirm-prompt-msg-%E6%B6%88%E6%81%AF%E7%AA%97%E5%8F%A3%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.2. alter、 confirm、 prompt、 msg 消息窗口相关函数</h3> 
 <div class="highlight highlight-source-js">
- <pre>  <span class="pl-c">/**</span>
+ <pre>  <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">   * 操作提示</span>
 <span class="pl-c">   * </span>
 <span class="pl-c">   * <span class="pl-k">@param</span> msg 消息内容</span>
 <span class="pl-c">   * <span class="pl-k">@param</span> type 消息图标类型：error、info、question、warning</span>
 <span class="pl-c">   * <span class="pl-k">@param</span> callback 回调函数</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   <span class="pl-smi">uiEx</span>.<span class="pl-c1">alert</span>(msg, type, callback);
 
-  <span class="pl-c">/**</span>
+  <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">   * 确认提示</span>
 <span class="pl-c">   * </span>
 <span class="pl-c">   * <span class="pl-k">@param</span> msg 消息内容</span>
 <span class="pl-c">   * <span class="pl-k">@param</span> callback 回调函数</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   <span class="pl-smi">uiEx</span>.<span class="pl-c1">confirm</span>(msg, callback);
 
-  <span class="pl-c">/**</span>
+  <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">   * 输入提示</span>
 <span class="pl-c">   * </span>
 <span class="pl-c">   * <span class="pl-k">@param</span> msg 消息内容</span>
 <span class="pl-c">   * <span class="pl-k">@param</span> callback 回调函数</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   <span class="pl-smi">uiEx</span>.<span class="pl-c1">prompt</span>(msg, callback);
 
-  <span class="pl-c">/**</span>
+  <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">   * 消息提示</span>
 <span class="pl-c">   * </span>
 <span class="pl-c">   * <span class="pl-k">@param</span> msg 消息内容</span>
 <span class="pl-c">   * <span class="pl-k">@param</span> position 消息位置：topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight; 默认为：bottomRight（右下角）</span>
 <span class="pl-c">   * <span class="pl-k">@param</span> params msg消息框参数</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   <span class="pl-smi">uiEx</span>.<span class="pl-en">msg</span>(msg, position, params);</pre>
 </div> 
 <h3> <a id="33-dialog-对话框相关函数" class="anchor" href="#33-dialog-%E5%AF%B9%E8%AF%9D%E6%A1%86%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.3. dialog 对话框相关函数</h3> 
@@ -799,31 +801,31 @@ function setDocumentScrollTop(ypos)
   </blockquote> </li> 
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/**</span>
+   <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 显示指定对话框</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> dialogSelector dialog选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> title 对话框标题</span>
 <span class="pl-c">* <span class="pl-k">@return</span> dialog对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openDialog</span>(dialogSelector, title);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 显示指定href的对话框</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> dialogSelector dialog选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> href 请求内容的href</span>
 <span class="pl-c">* <span class="pl-k">@param</span> title 对话框标题</span>
 <span class="pl-c">* <span class="pl-k">@return</span> dialog对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openHrefDialog</span>(dialogSelector, href, title)
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 关闭指定对话框</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> dialogSelector dialog选择器</span>
 <span class="pl-c">* <span class="pl-k">@return</span> dialog对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">closeDialog</span>(dialogSelector);</pre>
   </div> </li> 
 </ul> 
@@ -835,60 +837,60 @@ function setDocumentScrollTop(ypos)
    <p>EasyUI的form表单组件的submit提交方法具有一定迷惑和误导性。其内部submit使用的是iframe提交，并非真正的Ajax方式提交。 所以当使用者在服务器端试图通过请求头信息（X-Requested-With=XMLHttpRequest）判断是否是Ajax提交的请求时，并无法准确判断。</p> 
   </blockquote> <p>同时，uiEx 提供了一个 Ajax 表单提交全局事件处理函数<code>formSubmitSuccess</code>，能够监听表单Ajax提交成功事件，注册全局的处理函数。</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* 为使用EasyUIEx.submitAjax和EasyUIEx.submitURLAjax form表单提交成功的succes事件注册一个系统全局的必须执行函数</span>
 <span class="pl-c">* 类似于jQuery的全局ajaxSuccess函数</span>
 <span class="pl-c">* @param data 表单Ajax提交执行成功返回的数据</span>
 <span class="pl-c">*</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">formSubmitSuccess</span><span class="pl-k">=</span><span class="pl-k">function</span>(<span class="pl-smi">data</span>){
-  <span class="pl-c">//...</span>
+  <span class="pl-c"><span class="pl-c">//</span>...</span>
 }</pre>
   </div> </li> 
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/**</span>
+   <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 清除指定id的form表单信息</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> selector  表单选择器</span>
 <span class="pl-c">* <span class="pl-k">@return</span> form对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">clearForm</span>(selector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 重置reset指定id的form表单信息</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> selector</span>
 <span class="pl-c">*            表单选择器</span>
 <span class="pl-c">* <span class="pl-k">@return</span> form对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">resetForm</span>(selector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 开启表单验证</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> selector 表单选择器</span>
 <span class="pl-c">* <span class="pl-k">@return</span> form对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">enableValidate</span>(selector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 禁用表单验证</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> selector 表单选择器</span>
 <span class="pl-c">* <span class="pl-k">@return</span> form对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">disableValidate</span>(selector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 对表单进行验证</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> selector 表单选择器</span>
 <span class="pl-c">* <span class="pl-k">@return</span> form对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">validate</span>(selector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 代替form(&quot;load&quot;, data);为表单填充数据</span>
 <span class="pl-c">* 可以指定表单名前缀，将数据填充到指定前缀的属性中去</span>
 <span class="pl-c">* 如将data中的name属性值填充到user.name中</span>
@@ -897,19 +899,19 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c">* <span class="pl-k">@param</span> data 表单数据</span>
 <span class="pl-c">* <span class="pl-k">@param</span> prefix 表单名称前缀</span>
 <span class="pl-c">* <span class="pl-k">@return</span> form对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">loadForm</span>(selector, data, prefix);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 普通表单提交</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> formSelector 表单选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params  可选; form表单额外提交的参数</span>
 <span class="pl-c">* <span class="pl-k">@param</span> noValidate 可选; 是否验证; boolean; 默认为true</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">submitForm</span>(formSelector, params, noValidate);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 以Ajax进行带表单验证的表单提交，内部封装了一个`xRequestedWith=XMLHttpRequest`参数；</span>
 <span class="pl-c">* 会随表单一同提交到服务器，帮助开发者在服务器端通过`xRequestedWith参数`来判断是否是Ajax请求。</span>
 <span class="pl-c">* </span>
@@ -917,10 +919,10 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c">* <span class="pl-k">@param</span> callback AJAX请求后的回调处理函数</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params 可选; form表单额外提交的参数</span>
 <span class="pl-c">* <span class="pl-k">@param</span> noValidate 可选; 是否验证; boolean; 默认为true</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">submitAjax</span>(formSelector, callback, params, noValidate);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 将表单以Ajax提交到指定url，内部封装了一个`xRequestedWith=XMLHttpRequest`参数；</span>
 <span class="pl-c">* 会随表单一同提交到服务器，帮助开发者在服务器端通过`xRequestedWith参数`来判断是否是Ajax请求。</span>
 <span class="pl-c">* </span>
@@ -929,14 +931,14 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c">* <span class="pl-k">@param</span> callback AJAX请求后的回调处理函数</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params 可选; form表单额外提交的参数</span>
 <span class="pl-c">* <span class="pl-k">@param</span> noValidate 可选; 是否验证; boolean; 默认为true</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">submitURLAjax</span>(formSelector, url, callback, params, noValidate) 
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 将form表单信息格式化为JSON返回</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* @parama formSelector form选择器</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">serializeJSON</span>(formSelector);</pre>
   </div> </li> 
 </ul> 
@@ -976,7 +978,7 @@ function setDocumentScrollTop(ypos)
     </div> </li> 
    <li> <p>API</p> 
     <div class="highlight highlight-source-js">
-     <pre><span class="pl-c">/**</span>
+     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 为指定Tab添加选项卡，支持双击关闭</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* @parma tabSelector 选项卡</span>
@@ -998,17 +1000,17 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c">*      - 引用的页面不能有body，否则加载的内容内部的JS文件文法执行</span>
 <span class="pl-c">*      - 会显示html渲染解析的提示</span>
 <span class="pl-c">* </span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openTab</span>(tabSelector, title, url, icon, isIframe);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 刷新当前选项卡选中的Panel</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> tabSelector 选项卡选择器</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">reloadSelTab</span>(tabSelector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 根据菜单Text自动在指定Tab打开某个菜单</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuSelector</span>
@@ -1017,10 +1019,10 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c">*            选项卡选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuText</span>
 <span class="pl-c">*            要打开的菜单文本，可以使用数组定义多个菜单文本</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuByText</span>(menuSelector, tabSeelctor, menuText);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 根据菜单Id自动在指定Tab打开某个菜单</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuSelector</span>
@@ -1029,10 +1031,10 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c">*            选项卡选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuId</span>
 <span class="pl-c">*            要打开的菜单id，可以使用数组定义多个菜单id</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuById</span>(menuSelector, tabSelctor, menuId);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 绑定tabs的右键菜单，实现：关闭，关闭其他，关闭所有；关闭左侧标签页、关闭右侧标签页；刷新等菜单功能</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> tabSelector tab选择器</span>
@@ -1051,7 +1053,7 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c">       &lt;div class=&quot;menu-sep&quot;&gt;&lt;/div&gt;</span>
 <span class="pl-c">      &lt;div name=&quot;refresh&quot;  data-options=&quot;iconCls:'icon-reload'&quot;&gt;刷新标签&lt;/div&gt; </span>
 <span class="pl-c">&lt;/div&gt;</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">addTabsContextMenu</span>(tabSelector, menuSelector)</pre>
     </div> </li> 
   </ul> </li> 
@@ -1061,6 +1063,16 @@ function setDocumentScrollTop(ypos)
  <li><p>支持两种方式调用</p></li> 
  <li><p><strong>封装和扩展</strong>：EasyUIEx 针对使用 datagrid 相关组件的 CRUD 应用进行了深入封装，提供了附加功能，在调用初始化方法时，配合传入<code>url</code>、<code>saveUrl</code>、<code>updateUrl</code>、<code>destroyUrl</code>等 CRUD 的服务器操作地址参数（和 edatagrid 的参数保持了一致），就能以一致的方式借助 EasyUIEx 的 API 完 CRUD 操作。</p></li> 
  <li><p><strong>性能优化</strong>：为datagrid和edatagrid 提供了行编辑状态监测，优化修改的请求。当行编辑，列编辑，未修改内容时并不提交请求。</p></li> 
+ <li> <p><strong>rowData 返回参数</strong>: </p> <p>当新增或修改数据后，可以在响应的 <code>JSON</code> 中返回一个<code>rowData</code> 属性，EasyUIEx 可以根据 <code>rowData</code> 的内容自动刷新新增或编辑的页面静态数据。</p> <p>例如， 在新增数据时，如果当前数据主键是提交到服务器端后生成（如数据主键由自动增长生成器控制），则添加数据后，请在返回的 <code>JSON</code> 中设置一个 <strong>rowData</strong> 属性，返回您包含<code>主键 id 属性</code>的最新数据（其他属性如果不需要刷新则可选可选），以自动刷新新添加的前行。<strong>否则在新增数据后，删除该条数据，您之前新增的数据在客户端并没有主键，会出现删除失败的提示。</strong></p> 
+  <div class="highlight highlight-source-json">
+   <pre>{
+    <span class="pl-s"><span class="pl-pds">&quot;</span>msg<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>Save  Successed!<span class="pl-pds">&quot;</span></span>,
+    <span class="pl-s"><span class="pl-pds">&quot;</span>locationUrl<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>,
+    <span class="pl-s"><span class="pl-pds">&quot;</span>callback<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>,
+    <span class="pl-s"><span class="pl-pds">&quot;</span>statusCode<span class="pl-pds">&quot;</span></span>:<span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">&quot;</span>rowData<span class="pl-pds">&quot;</span></span>:{<span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>:<span class="pl-c1">10</span>,<span class="pl-s"><span class="pl-pds">&quot;</span>dname<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>x<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>loc<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>x<span class="pl-pds">&quot;</span></span>} <span class="pl-ii">//</span> <span class="pl-ii">返回自动增长主键来更新客户端数据</span>
+}</pre>
+  </div> </li> 
  <li> <p>datagrid、edatagrid、detaildatagrid、treegrid 共同扩展属性</p> 
   <table> 
    <thead> 
@@ -1211,92 +1223,92 @@ function setDocumentScrollTop(ypos)
   </table> </li> 
  <li> <p>Demo</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">// datagrid 初始化</span>
+   <pre><span class="pl-c"><span class="pl-c">//</span> datagrid 初始化</span>
 <span class="pl-k">var</span> dg <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysUserDataGrid<span class="pl-pds">&quot;</span></span>);
 <span class="pl-smi">dg</span>.<span class="pl-en">initDatagrid</span>({
 iconCls <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>icon-group<span class="pl-pds">'</span></span>,
-<span class="pl-c">/*</span>
+<span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c"> * 行编辑:saveUrl、updateUrl、destroyUrl配合uiEx使用</span>
-<span class="pl-c"> */</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_list.action<span class="pl-pds">&quot;</span></span>,
 saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_save.action<span class="pl-pds">&quot;</span></span>,
 updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_update.action<span class="pl-pds">&quot;</span></span>,
 destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_delete.action<span class="pl-pds">&quot;</span></span>,
-showHeaderContextMenu<span class="pl-k">:</span><span class="pl-c1">true</span>, <span class="pl-c">// 表头添加右键菜单，可选择显示的列</span>
-<span class="pl-c">// clickRowEdit:true, //注册单击行编辑，可以代替edatagrid实现带行编辑的CRUD</span>
+showHeaderContextMenu<span class="pl-k">:</span><span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 表头添加右键菜单，可选择显示的列</span>
+<span class="pl-c"><span class="pl-c">//</span> clickRowEdit:true, //注册单击行编辑，可以代替edatagrid实现带行编辑的CRUD</span>
 pageSize <span class="pl-k">:</span> <span class="pl-c1">10</span>,
 pageList <span class="pl-k">:</span> [ <span class="pl-c1">5</span>, <span class="pl-c1">10</span>, <span class="pl-c1">15</span>, <span class="pl-c1">20</span> ],
 checkbox <span class="pl-k">:</span> <span class="pl-c1">true</span>,
 singleSelect <span class="pl-k">:</span> <span class="pl-c1">false</span>,
 checkOnSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-<span class="pl-c">//双击操作</span>
+<span class="pl-c"><span class="pl-c">//</span>双击操作</span>
 <span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowIndex</span>, <span class="pl-smi">rowData</span>) {
     <span class="pl-en">toEdit</span>(rowData);
 },
 menuSelector<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>#sysUserContextMenu<span class="pl-pds">&quot;</span></span>,
 showContextMenu<span class="pl-k">:</span><span class="pl-c1">true</span>,
 sendRowDataPrefix<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>sysUser.<span class="pl-pds">&quot;</span></span>,
-mutipleDelete<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 多行提交删除</span>
-mutipleDeleteProperty<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>userId<span class="pl-pds">&quot;</span></span> <span class="pl-c">// 多行删除时提及给服务器的属性和值，不会添加sendRowDataPrefix前缀，支持使用数组指定多个属性名</span>
+mutipleDelete<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 多行提交删除</span>
+mutipleDeleteProperty<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>userId<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span> 多行删除时提及给服务器的属性和值，不会添加sendRowDataPrefix前缀，支持使用数组指定多个属性名</span>
 });</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">// edatagrid 初始化</span>
+   <pre><span class="pl-c"><span class="pl-c">//</span> edatagrid 初始化</span>
 <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#deptDataGrid<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initEdatagrid</span>({
-   <span class="pl-c">/*</span>
+   <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">    * 行编辑:saveUrl、updateUrl、destroyUrl配合uiEx使用</span>
-<span class="pl-c">    */</span>
+<span class="pl-c">    <span class="pl-c">*/</span></span>
    url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_list.action<span class="pl-pds">&quot;</span></span>,
    saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_save.action<span class="pl-pds">&quot;</span></span>,
    updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_update.action<span class="pl-pds">&quot;</span></span>,
    destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_delete.action<span class="pl-pds">&quot;</span></span>,
    idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>,
-   showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 表头添加右键菜单，可选择显示的列</span>
+   showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 表头添加右键菜单，可选择显示的列</span>
    pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>,
    checkbox <span class="pl-k">:</span> <span class="pl-c1">true</span>,
    checkOnSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>,
    singleSelect <span class="pl-k">:</span> <span class="pl-c1">false</span>,
    autoSave <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-   <span class="pl-c">//queryParam:{&quot;rows&quot;:dg.datagrid(&quot;options&quot;).pageSize},</span>
-   clickEdit <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">//单击编辑</span>
-   showMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 显示操作消息</span>
-   <span class="pl-c">//右键菜单</span>
+   <span class="pl-c"><span class="pl-c">//</span>queryParam:{&quot;rows&quot;:dg.datagrid(&quot;options&quot;).pageSize},</span>
+   clickEdit <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span>单击编辑</span>
+   showMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 显示操作消息</span>
+   <span class="pl-c"><span class="pl-c">//</span>右键菜单</span>
    menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#deptContextMenu<span class="pl-pds">&quot;</span></span>,
    showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-   sendRowDataPrefix <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.<span class="pl-pds">&quot;</span></span>, <span class="pl-c">//提交数据前缀</span>
-   successKey <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>statusCode<span class="pl-pds">&quot;</span></span>, <span class="pl-c">//服务器端返回的成功标记key</span>
-   successValue <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>200<span class="pl-pds">&quot;</span></span> <span class="pl-c">//服务器端返回的成功标记value</span>
+   sendRowDataPrefix <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>提交数据前缀</span>
+   successKey <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>statusCode<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>服务器端返回的成功标记key</span>
+   successValue <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>200<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span>服务器端返回的成功标记value</span>
 });</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">// detaildatagrid 初始化</span>
+   <pre><span class="pl-c"><span class="pl-c">//</span> detaildatagrid 初始化</span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initDetailDatagrid</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#userDataGrid2<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>do/toDetailEdit.jsp<span class="pl-pds">&quot;</span></span>,{
-<span class="pl-c">/*</span>
+<span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* 行编辑:saveUrl、updateUrl、destroyUrl配合uiEx使用</span>
-<span class="pl-c">*/</span>
-url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doList.jsp<span class="pl-pds">&quot;</span></span>, <span class="pl-c">//数据表格数据查询</span>
-saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=add<span class="pl-pds">&quot;</span></span>, <span class="pl-c">//保存</span>
-updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=edit&amp;id={id}<span class="pl-pds">&quot;</span></span>, <span class="pl-c">//修改</span>
-destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=delete<span class="pl-pds">&quot;</span></span>, <span class="pl-c">//删除</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
+url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doList.jsp<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>数据表格数据查询</span>
+saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=add<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>保存</span>
+updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=edit&amp;id={id}<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>修改</span>
+destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=delete<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>删除</span>
 iconCls <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>icon-group<span class="pl-pds">&quot;</span></span>,
-showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// 表头添加右键菜单，可选择显示的列</span>
+showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> 表头添加右键菜单，可选择显示的列</span>
 pageSize <span class="pl-k">:</span> <span class="pl-c1">5</span>,
 pageList <span class="pl-k">:</span> [ <span class="pl-c1">5</span>, <span class="pl-c1">10</span>, <span class="pl-c1">15</span>, <span class="pl-c1">20</span> ]
 });</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">// treegrid 初始化</span>
+   <pre><span class="pl-c"><span class="pl-c">//</span> treegrid 初始化</span>
 <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionDataGrid<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initTreegrid</span>({
 url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sysMenuPermission_list.action<span class="pl-pds">'</span></span>,
 rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>,
 idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,
 treeField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>,
 lines <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-<span class="pl-c">//双击操作</span>
+<span class="pl-c"><span class="pl-c">//</span>双击操作</span>
 <span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowData</span>) {
     <span class="pl-en">toEdit</span>(rowData);
 },
-<span class="pl-c">// 表头添加右键菜单，可选择显示的列</span>
+<span class="pl-c"><span class="pl-c">//</span> 表头添加右键菜单，可选择显示的列</span>
 showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
 menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionContextMenu<span class="pl-pds">&quot;</span></span>,
 showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
@@ -1306,70 +1318,70 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
   <ul> 
    <li> <p>grid 初始化 API</p> 
     <div class="highlight highlight-source-js">
-     <pre><span class="pl-c">/**</span>
+     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* DataGrid: datagrid初始化，包含了uiEx.dataGridDefaults默认参数</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector datagrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params 可选；datagrid初始化参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initDatagrid</span>(datagridSelector, params);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* EditDataGrid: edatagrid初始化，包含了uiEx.dataGridDefaults默认参数</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector datagrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params 可选；datagrid初始化参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initEdatagrid</span>(datagridSelector, params);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* DetailDataGrid: DetailDataGrid初始化，包含了detailDataGridDefaults参数的默认值</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector datagrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> detailUrl 加载详细视图的url</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params 可选；其他参数，主要包括数据CRUD的url地址</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initDetailDatagrid</span>(datagridSelector, detailUrl, params);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Treegird: Treegird初始化</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treegridSelector</span>
 <span class="pl-c">*            treegrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params</span>
 <span class="pl-c">*            可选；treegrid其他参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTreegrid</span>(treegridSelector, params); </pre>
     </div> </li> 
    <li> <p>datagrid CRUD API</p> 
     <div class="highlight highlight-source-js">
-     <pre><span class="pl-c">/*</span>
+     <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* ############## DataGrid CRUD</span>
-<span class="pl-c">*/</span>
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">*  datagrid：为行编辑DataGrid追加新行</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector DataGrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> rowParam 可选；新数据行的数据参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">rowAdd</span>(datagridSelector, rowParam);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* datagrid：为指定DataGrid启用行编辑，会引起一次新加载</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector  datagrid选择器或对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">rowEdit</span>(datagridSelector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 取消选中行的编辑</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
 <span class="pl-c">*            DataGrid选择器</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">rowCancelEdit</span>(datagridSelector)；
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* datagird、edatagrid、detaildatagrid、treegrid:删除选中行，支持mutipleDelete多行删除参数</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
@@ -1382,56 +1394,58 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 <span class="pl-c">*            可选；字符串值，执行成功返回的标记key，值必须和successValue相同才代表删除成功</span>
 <span class="pl-c">* <span class="pl-k">@param</span> successValue</span>
 <span class="pl-c">*            可选；字符串值，执行成功返回的标记value</span>
+<span class="pl-c">* <span class="pl-k">@param</span> callback</span>
+<span class="pl-c">*            可选；执行删除成功后的回调函数，参数为服务器端返回的数据</span>
 <span class="pl-c">*  </span>
 <span class="pl-c">*  - demo：</span>
 <span class="pl-c">*  dg.rowDelete(true, false, &quot;statusCode&quot;, &quot;200&quot;);</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">rowDelete</span>(datagridSelector,  showMsg, reloadDataGrid, successKey, successValue)；</pre>
     </div> </li> 
    <li> <p>DetailDataGrid API</p> 
     <div class="highlight highlight-source-js">
-     <pre><span class="pl-c">/**</span>
+     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* DetailDataGrid: DetailDataGrid添加行</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector datagrid选择器</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">detailRowAdd</span>(datagridSelector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* DetailDataGrid: DetailDataGrid编辑保存</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector datagrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> index 编辑行索引，加载详细数据时，index值会提交到服务器，直接从服务器端请求参数获得传入该函数</span>
 <span class="pl-c">*            例如，JSP写法：uiEx.detailRowSave('#userDataGrid',${param.index})</span>
 <span class="pl-c">* <span class="pl-k">@param</span> showMsg 可选；是否显示提示信息</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">detailRowSave</span>(datagridSelector, index, showMsg);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* DetailDataGrid: DetailDataGrid取消编辑或添加</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector datagrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> index 编辑行索引，加载详细数据时，index值会提交到服务器，直接从服务器端请求参数获得传入该函数</span>
 <span class="pl-c">*            例如，JSP写法：uiEx.detailRowCancel('#userDataGrid',${param.index})</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">detailRowCancel</span>(datagridSelector, index);</pre>
     </div> </li> 
    <li> <p>Edatagrid API</p> 
     <div class="highlight highlight-source-js">
-     <pre><span class="pl-c">/**</span>
+     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* edatagrid, 开始编辑，直接单击编辑，无需双击开启编辑</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
 <span class="pl-c">*            EDataGrid选择器</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">beginEditGrid</span>(datagridSelector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* edatagrid, 结束编辑，进入可编辑状态 不同于disableEditing禁用编辑，禁用编辑则无法编辑</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
 <span class="pl-c">*            EDataGrid选择器</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">endEditGrid</span>(datagridSelector);</pre>
     </div> </li> 
   </ul> </li> 
@@ -1482,18 +1496,18 @@ rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>,
 idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,
 treeField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>,
 lines <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-<span class="pl-c">//双击操作</span>
+<span class="pl-c"><span class="pl-c">//</span>双击操作</span>
 <span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowData</span>) {
     <span class="pl-en">toEdit</span>(rowData);
 },
-<span class="pl-c">// 表头添加右键菜单，可选择显示的列</span>
+<span class="pl-c"><span class="pl-c">//</span> 表头添加右键菜单，可选择显示的列</span>
 showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
 menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionContextMenu<span class="pl-pds">&quot;</span></span>,
 showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 });</pre>
   </div> 
   <div class="highlight highlight-text-html-basic">
-   <pre><span class="pl-c">&lt;!-- 折叠和展开当前目录 --&gt;</span>
+   <pre><span class="pl-c"><span class="pl-c">&lt;!--</span> 折叠和展开当前目录 <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>sysMenuRightContextMenu<span class="pl-pds">&quot;</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui-menu<span class="pl-pds">&quot;</span></span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>width:120px;<span class="pl-pds">&quot;</span></span>&gt;
 &lt;<span class="pl-ent">div</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>uiEx.collapse('#sysMenuRightDataGrid')<span class="pl-pds">&quot;</span></span>&gt;折叠目录&lt;/<span class="pl-ent">div</span>&gt;
 &lt;<span class="pl-ent">div</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>uiEx.expand('#sysMenuRightDataGrid')<span class="pl-pds">&quot;</span></span>&gt;展开目录&lt;/<span class="pl-ent">div</span>&gt;
@@ -1501,38 +1515,38 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
   </div> </li> 
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/**</span>
+   <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Treegird: Treegird 初始化</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treegridSelector</span>
 <span class="pl-c">*            treegrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params</span>
 <span class="pl-c">*            可选；treegrid其他参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTreegrid</span>(treegridSelector, params)
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Treegird: 使用 parentId 属性表示的 Treegird 初始化</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treegridSelector</span>
 <span class="pl-c">*            treegrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params</span>
 <span class="pl-c">*            可选；treegrid其他参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initParentIdTreegrid</span>(treegridSelector, params)
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 折叠选中目录</span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeGridSelector treeGrid选择器 </span>
 <span class="pl-c">* </span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-c1">collapse</span>(treeGridSelector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 展开选中目录</span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeGridSelector treeGrid选择器 </span>
 <span class="pl-c">* </span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-c1">expand</span>(treeGridSelector);</pre>
   </div> </li> 
 </ul> 
@@ -1562,28 +1576,28 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
   </table> </li> 
  <li> <p>Demo</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">//普通树菜单初始化</span>
+   <pre><span class="pl-c"><span class="pl-c">//</span>普通树菜单初始化</span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTree</span>(
-<span class="pl-s"><span class="pl-pds">&quot;</span>#menu<span class="pl-pds">&quot;</span></span>,  <span class="pl-c">//树菜单selector</span>
-<span class="pl-s"><span class="pl-pds">&quot;</span>#tabs<span class="pl-pds">&quot;</span></span>,  <span class="pl-c">//打开树菜单url的tabSelector</span>
-   <span class="pl-c">//其他树参数</span>
+<span class="pl-s"><span class="pl-pds">&quot;</span>#menu<span class="pl-pds">&quot;</span></span>,  <span class="pl-c"><span class="pl-c">//</span>树菜单selector</span>
+<span class="pl-s"><span class="pl-pds">&quot;</span>#tabs<span class="pl-pds">&quot;</span></span>,  <span class="pl-c"><span class="pl-c">//</span>打开树菜单url的tabSelector</span>
+   <span class="pl-c"><span class="pl-c">//</span>其他树参数</span>
 {
-    expandChilds<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">//点击父菜单，展开子菜单</span>
+    expandChilds<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span>点击父菜单，展开子菜单</span>
     data<span class="pl-k">:</span> <span class="pl-smi">EasySSH</span>.<span class="pl-smi">menuTreeJson</span>
-   <span class="pl-c">//url : &quot;json/menuTree.json.js&quot;, </span>
+   <span class="pl-c"><span class="pl-c">//</span>url : &quot;json/menuTree.json.js&quot;, </span>
 }
 );</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">//自动打开指定Text的菜单 </span>
+   <pre><span class="pl-c"><span class="pl-c">//</span>自动打开指定Text的菜单 </span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuByText</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#menu<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>#tabs<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>CRUD<span class="pl-pds">&quot;</span></span>);</pre>
   </div> </li> 
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* ############## Tree </span>
-<span class="pl-c">*/</span>
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Tree: tree初始化，包含两大默认功能：</span>
 <span class="pl-c">* 1. 点击菜单父节点打开子节点功能</span>
 <span class="pl-c">* 2. 点击菜单在tabSelector指定的tab打开</span>
@@ -1592,10 +1606,10 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector datagrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> tabSelector  打开树菜单url的tab选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params 可选；tree初始化参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTree</span>(treeSelector, tabSelector, params);
 
-  <span class="pl-c">/**</span>
+  <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Tree: 使用 parentId 属性表示的 tree 初始化，包含两大默认功能：</span>
 <span class="pl-c">* 1. 点击菜单父节点打开子节点功能</span>
 <span class="pl-c">* 2. 点击菜单在 tabSelector 指定的 tab 打开</span>
@@ -1604,10 +1618,10 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector datagrid选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> tabSelector  打开树菜单url的tab选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> params 可选；tree初始化参数</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initParentIdTree</span>(treeSelector, tabSelector, params);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* onSelect事件处理：Tree的onSelect事件的实现，能实现点击菜单父节点打开子节点功能 在树初始化时通过注册onSelect事件传入</span>
 <span class="pl-c">* onSelect : uiEx.expandChilds, //点击菜单父节点打开子节点功能</span>
 <span class="pl-c">* </span>
@@ -1616,30 +1630,30 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> node</span>
 <span class="pl-c">*            事件调用时传入点击的节点对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">expandChilds</span>(node);</pre>
   </div> </li> 
  <li> <p>tabs 绑定相关 API</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* ############## Tree Menu open to tab</span>
-<span class="pl-c">*/</span>
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 根据菜单Text自动在指定Tab打开某个菜单</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuSelector menu选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> tabSeelctor 选项卡选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuText  要打开的菜单文本，可以使用数组定义多个菜单文本</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuByText</span>(menuSelector, tabSelector, menuText);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 根据菜单Id自动在指定Tab打开某个菜单</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuSelector menu选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> tabSeelctor 选项卡选择器</span>
 <span class="pl-c">* <span class="pl-k">@param</span> menuId 要打开的菜单id，可以使用数组定义多个菜单id</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuById</span>(menuSelector, tabSelctor, menuId);</pre>
   </div> </li> 
 </ul> 
@@ -1674,47 +1688,47 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
   </table> </li> 
  <li> <p>Demo</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* 复选框树初始化</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initTreeChk</span>(
-      <span class="pl-c">//树加载参数</span>
+      <span class="pl-c"><span class="pl-c">//</span>树加载参数</span>
       {
-          url<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>do/menuJson.jsp<span class="pl-pds">&quot;</span></span>  <span class="pl-c">//获取树JSON数据</span>
+          url<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>do/menuJson.jsp<span class="pl-pds">&quot;</span></span>  <span class="pl-c"><span class="pl-c">//</span>获取树JSON数据</span>
       },
-      [<span class="pl-c1">11</span>] <span class="pl-c">//默认选中值数组</span>
+      [<span class="pl-c1">11</span>] <span class="pl-c"><span class="pl-c">//</span>默认选中值数组</span>
 );</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* 初始化权限复选框</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTreeChk</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysRoleEditRights<span class="pl-pds">&quot;</span></span>, {
   url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysMenuRight_listAll.action<span class="pl-pds">&quot;</span></span>,
   checkbox<span class="pl-k">:</span><span class="pl-c1">true</span>,
   animate<span class="pl-k">:</span><span class="pl-c1">true</span>,
   lines<span class="pl-k">:</span><span class="pl-c1">true</span>,
-  noChildCascadeCheck<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">//级联选中父节点，但选中父节点不级联选中子节点</span>
-  showTitle<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>remark<span class="pl-pds">&quot;</span></span> <span class="pl-c">//将remark属性作为title显示</span>
+  noChildCascadeCheck<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span>级联选中父节点，但选中父节点不级联选中子节点</span>
+  showTitle<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>remark<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span>将remark属性作为title显示</span>
 }, <span class="pl-smi">data</span>.<span class="pl-smi">list</span>);</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* 重置</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">rights</span>.<span class="pl-en">resetTree</span><span class="pl-k">=</span><span class="pl-k">function</span>(){
   <span class="pl-smi">uiEx</span>.<span class="pl-en">treeChkRest</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>);
 }</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* 提交</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">rights</span>.<span class="pl-en">submit</span><span class="pl-k">=</span><span class="pl-k">function</span>(){
   <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsForm<span class="pl-pds">&quot;</span></span>).<span class="pl-en">submitAjax</span>(<span class="pl-k">function</span>(<span class="pl-smi">data</span>){
           <span class="pl-en">console</span>.<span class="pl-c1">info</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>提交成功<span class="pl-pds">&quot;</span></span>);
       },
-      <span class="pl-c">//随rightsForm表单一同提交到服务器的参数——复选框树选中的节点id列表（#分隔）</span>
+      <span class="pl-c"><span class="pl-c">//</span>随rightsForm表单一同提交到服务器的参数——复选框树选中的节点id列表（#分隔）</span>
       {
           ids<span class="pl-k">:</span><span class="pl-smi">uiEx</span>.<span class="pl-en">getCheckedIds</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>).<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#<span class="pl-pds">&quot;</span></span>)
       }
@@ -1722,64 +1736,64 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 }</pre>
   </div> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* 获得复选框树选中的节点中attributeArray指定的属性值，返回获得值列表的数组</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">getCheckedInfos</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysRoleAddRights<span class="pl-pds">&quot;</span></span>,[<span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>type<span class="pl-pds">&quot;</span></span>])</pre>
   </div> </li> 
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c">/*</span>
+   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* ############## Checkbox Tree</span>
-<span class="pl-c">*/</span>
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 复选框树初始化</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector 树选择器或对象</span>
 <span class="pl-c">* <span class="pl-k">@param</span> param 树加载参数</span>
 <span class="pl-c">* <span class="pl-k">@param</span> values 默认选中值数组</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTreeChk</span>(treeSelector, param, values);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* parentId 表示的复选框树初始化</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector 树选择器或对象</span>
 <span class="pl-c">* <span class="pl-k">@param</span> param 树加载参数</span>
 <span class="pl-c">* <span class="pl-k">@param</span> values 默认选中值数组</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initParentIdTreeChk</span>(treeSelector, param, values);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 带复选框的树重置，配合uiEx.treeChk使用</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector 树选择器或对象</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">treeChkRest</span>(treeSelector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 设置选中的树复选框，注意：此方法必须在树渲染完后调用</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector 树选择器或对象</span>
 <span class="pl-c">* <span class="pl-k">@param</span> values 选中的树节点ID数组</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">treeChkSetValues</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">treeSelector</span>, <span class="pl-smi">values</span>); 
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 获得带复选框树选中的节点id数组</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector  树选择器或对象</span>
 <span class="pl-c">* <span class="pl-k">@return</span> 带复选框树选中的节点id数组</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 uiEx.getCheckedIds(treeSelector);
 
-<span class="pl-c">/**</span>
+<span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* 获得复选框树选中的节点中attributeArray指定的属性值，返回获得值列表的数组</span>
 <span class="pl-c">* </span>
 <span class="pl-c">* <span class="pl-k">@param</span> treeSelector 树选择器或对象</span>
 <span class="pl-c">* <span class="pl-k">@param</span> propertyArray 树属性数组</span>
 <span class="pl-c">* <span class="pl-k">@return</span> 获得值列表的数组</span>
-<span class="pl-c">*/</span>
+<span class="pl-c"><span class="pl-c">*/</span></span>
 uiEx.getCheckedInfos(treeSelector, propertyArray);</pre>
   </div> </li> 
 </ul> 
@@ -1795,13 +1809,13 @@ data<span class="pl-e">-options</span>=<span class="pl-s"><span class="pl-pds">&
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
    <pre><span class="pl-en">$</span>(<span class="pl-k">function</span>() {
-  <span class="pl-c">/*</span>
+  <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">   * ################# 自定义验证部分</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
 
-  <span class="pl-c">/**</span>
+  <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">   * 比较输入是否与指定元素一致</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   <span class="pl-smi">$</span>.<span class="pl-en">extend</span>(<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">validatebox</span>.<span class="pl-smi">defaults</span>.<span class="pl-c1">rules</span>, {
       equals <span class="pl-k">:</span> {
           <span class="pl-en">validator</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">value</span>, <span class="pl-smi">param</span>) {
@@ -1811,9 +1825,9 @@ data<span class="pl-e">-options</span>=<span class="pl-s"><span class="pl-pds">&
       }
   });
 
-  <span class="pl-c">/**</span>
+  <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">   * 输入最小长度验证</span>
-<span class="pl-c">   */</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
   <span class="pl-smi">$</span>.<span class="pl-en">extend</span>(<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">validatebox</span>.<span class="pl-smi">defaults</span>.<span class="pl-c1">rules</span>, {
       minLength <span class="pl-k">:</span> {
           <span class="pl-en">validator</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">value</span>, <span class="pl-smi">param</span>) {
@@ -1828,21 +1842,22 @@ data<span class="pl-e">-options</span>=<span class="pl-s"><span class="pl-pds">&
 </ul> 
 <h4> <a id="311-其他函数" class="anchor" href="#311-%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.11. 其他函数</h4> 
 <div class="highlight highlight-source-js">
- <pre><span class="pl-c">/**</span>
+ <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c"> * 将变量uiEx的控制权让渡给第一个实现它的那个库</span>
 <span class="pl-c"> * <span class="pl-k">@return</span> uiEx对象的引用</span>
-<span class="pl-c"> */</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">noConflict</span>();
 
-<span class="pl-c">/*</span>
+<span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c"> * parentId 类型树生成转换函数，在树形组件的 loadFilter 函数中调用</span>
-<span class="pl-c"> */</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-en">loadFilter</span><span class="pl-k">:</span><span class="pl-k">function</span>(<span class="pl-smi">rows</span>){
     <span class="pl-smi">uiEx</span>.<span class="pl-en">convert</span>(rows);
 }</pre>
 </div> 
 <h2> <a id="4-easyuiex-实例" class="anchor" href="#4-easyuiex-%E5%AE%9E%E4%BE%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. EasyUIEx 实例：</h2> 
 <p><a href="http://www.easyproject.cn/easyUIExDemo" title="EasyUIEx demo">EasyUIEx demo online</a></p> 
+<p><a href="http://www.easyproject.cn/easyee" title="EasyEE">EasyEE</a></p> 
 <h2> <a id="end" class="anchor" href="#end" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>END</h2> 
 <h3> <a id="官方主页" class="anchor" href="#%E5%AE%98%E6%96%B9%E4%B8%BB%E9%A1%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://www.easyproject.cn/easyuiex/zh-cn/index.jsp" title="官方主页">官方主页</a> </h3> 
 <p><a href="http://www.easyproject.cn/easyuiex/zh-cn/index.jsp#donation" title="留言评论">留言评论</a></p> 

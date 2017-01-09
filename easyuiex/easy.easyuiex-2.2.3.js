@@ -1,7 +1,7 @@
 /**
  * EasyUIEx
  * 
- * Version 2.2.2
+ * Version 2.2.3
  * 
  * http://easyproject.cn https://github.com/ushelp
  * 
@@ -1494,12 +1494,14 @@
 	 *            可选；字符串值，执行成功返回的标记key，值必须和successValue相同才代表删除成功
 	 * @param successValue
 	 *            可选；字符串值，执行成功返回的标记value
+	 * @param callback
+	 *            可选；执行删除成功后的回调函数，参数为服务器端返回的数据
 	 *  
 	 *  - demo：
 	 *  dg.rowDelete(true, false, "statusCode", "200");
 	 */
 	uiEx.rowDelete = function(datagridSelector, showMsg, reloadDataGrid,
-			successKey, successValue) {
+			successKey, successValue, callback) {
 		var dg = $(datagridSelector);
 		var dgId = dg.attr("id");
 		var delRows = [];
@@ -1620,15 +1622,23 @@
 														}
 
 													}
-
+													if(callback){
+														callback(data);
+													}
+													// 判断是否当前页最后一条数据
+													if(dg.datagrid("getRows").length==0){
+														// 分页，且大于第一页
+														if(dg.datagrid("options").pageSize && dg.datagrid("options").pageNumber>1){
+															dg.datagrid({"pageNumber":dg.datagrid("options").pageNumber-1});//刷新表格
+														}
+													}
 												}
 											});
 									return;
 								}
-
+						
 								// 单行提交，多次
-								$
-										.each(
+								$.each(
 												delRows,
 												function(i, rowIndex) {
 													var lastEditIndex = rowIndex;
@@ -1653,13 +1663,7 @@
 														row2 = row;
 													}
 
-													dg
-															.datagrid(
-																	'cancelEdit',
-																	lastEditIndex)
-															.datagrid(
-																	'deleteRow',
-																	lastEditIndex);
+													dg.datagrid('cancelEdit',lastEditIndex).datagrid('deleteRow',lastEditIndex);
 													// 同时提交分页参数
 													if (dg.datagrid("options")) {
 														if (dg
@@ -1695,11 +1699,7 @@
 																		if (successKey) {
 																			if (data[successKey]
 																					&& data[successKey] == successValue) {
-																				// dg.datagrid('cancelEdit',
-																				// lastEditIndex).datagrid(
-																				// 'deleteRow',
-																				// lastEditIndex);
-
+								
 																				clearLast(dgId);
 																				uiEx
 																						.msg(uiEx.rowDeleteSuccessMsg);
@@ -1718,25 +1718,26 @@
 																						.msg(uiEx.rowDeleteFailureMsg);
 																			}
 																		} else {
-																			// dg.datagrid('cancelEdit',
-																			// lastEditIndex).datagrid(
-																			// 'deleteRow',
-																			// lastEditIndex);
-																			dg
-																					.datagrid(
-																							'deleteRow',
-																							lastEditIndex);
 																			clearLast(dgId);
-																			uiEx
-																					.msg(uiEx.rowDeleteSuccessMsg);
+																			uiEx.msg(uiEx.rowDeleteSuccessMsg);
 																		}
 
 																	}
-
+																	if(callback){
+																		callback(data);
+																	}
+																	// 判断是否当前页最后一条数据
+																	if(dg.datagrid("getRows").length==0){
+																		// 分页，且大于第一页
+																		if(dg.datagrid("options").pageSize && dg.datagrid("options").pageNumber>1){
+																			dg.datagrid({"pageNumber":dg.datagrid("options").pageNumber-1});//刷新表格
+																		}
+																	}
 																}
 															});
 
 												});
+								// 刷新
 								if (reloadDataGrid) {
 									dg.datagrid('reload');
 								}
@@ -2520,12 +2521,14 @@
 				 *            可选；字符串值，执行成功返回的标记key，值必须和successValue相同才代表删除成功
 				 * @param successValue
 				 *            可选；字符串值，执行成功返回的标记value
+				 * @param callback
+				 *  		  执行删除成功后的回调函数，参数为服务器端返回的数据
 				 */
 				rowDelete : function(showMsg, reloadDataGrid, successKey,
-						successValue) {
+						successValue, callback) {
 					return this.each(function(i, v) {
 						uiEx.rowDelete(this, showMsg, reloadDataGrid,
-								successKey, successValue);
+								successKey, successValue, callback);
 					});
 				},
 				/**

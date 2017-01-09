@@ -4,7 +4,7 @@
 
 **jQuery EasyUI + EasyUIEx** 的架构产生于企业开发实践，遵循Easy的原则，目标是简化一切可以简化的部分，为一切不具备的需求提供扩展。着重在CRUD方面进行了封装扩展，也欢迎更多开发实践的精华加入。
 
-[HTML 使用手册](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_zh_CN.html 'HTML EasyUIEx 使用手册')
+[中文 API 在线速览](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_zh_CN.html 'EasyUIEx 中文 API 在线速览')
 
 
 ##  1. 下载使用
@@ -23,7 +23,7 @@
 
 <!-- **EasyUIEx** -->
 <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.2.js"></script>
+<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.3.js"></script>
 <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
 <!-- EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' -->
 <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>
@@ -73,7 +73,13 @@ EasyUIEx API 中针对 DOM 操作，带 selector 选择器的扩展函数都支�
     ```
 
 
+
 ## 3. API 详解
+
+### 在线 API 速览
+
+[中文 API 在线速览](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_zh_CN.html)
+
  
 ### 3.1. 全局配置
 
@@ -468,6 +474,22 @@ EasyUIEx API 中针对 DOM 操作，带 selector 选择器的扩展函数都支�
 - **性能优化**：为datagrid和edatagrid 提供了行编辑状态监测，优化修改的请求。当行编辑，列编辑，未修改内容时并不提交请求。
 
 
+- **rowData 返回参数**: 
+
+	当新增或修改数据后，可以在响应的 `JSON` 中返回一个` rowData` 属性，EasyUIEx 可以根据 `rowData` 的内容自动刷新新增或编辑的页面静态数据。
+	
+	例如， 在新增数据时，如果当前数据主键是提交到服务器端后生成（如数据主键由自动增长生成器控制），则添加数据后，请在返回的 `JSON` 中设置一个 **rowData** 属性，返回您包含`主键 id 属性`的最新数据（其他属性如果不需要刷新则可选可选），以自动刷新新添加的前行。**否则在新增数据后，删除该条数据，您之前新增的数据在客户端并没有主键，会出现删除失败的提示。**
+
+	```JSON
+	{
+		"msg":"Save  Successed!",
+		"locationUrl":"",
+		"callback":"",
+		"statusCode":200,
+		"rowData":{"deptno":10,"dname":"x","loc":"x"} // 返回自动增长主键来更新客户端数据
+	}
+	```
+
 - datagrid、edatagrid、detaildatagrid、treegrid 共同扩展属性
 
  | Name | Type | Description | Default |
@@ -688,6 +710,8 @@ $("#sysMenuPermissionDataGrid").initTreegrid({
   *            可选；字符串值，执行成功返回的标记key，值必须和successValue相同才代表删除成功
   * @param successValue
   *            可选；字符串值，执行成功返回的标记value
+  * @param callback
+  *            可选；执行删除成功后的回调函数，参数为服务器端返回的数据
   *  
   *  - demo：
   *  dg.rowDelete(true, false, "statusCode", "200");
@@ -1126,6 +1150,8 @@ loadFilter:function(rows){
 ##  4. EasyUIEx 实例：
 
 [EasyUIEx demo online](http://www.easyproject.cn/easyUIExDemo 'EasyUIEx demo')
+
+[EasyEE](http://www.easyproject.cn/easyee 'EasyEE')
 
 
 

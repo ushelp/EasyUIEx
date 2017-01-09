@@ -1,7 +1,7 @@
 /**
  * EasyUIEx edatagrid
  * 
- * Version 1.5.0
+ * Version 1.5.1
  * 
  * http://easyproject.cn https://github.com/ushelp
  * 
@@ -173,7 +173,6 @@
 								newData=data.rowData;
 							}
 							newData.isNewRecord=null;
-							console.info(newData);
 							$(target).datagrid('updateRow', {
 								index: index,
 								row: newData
@@ -495,7 +494,6 @@
 				});
 				function _del(row){
 					var index = dg.datagrid('getRowIndex', row);
-					console.info(row); 
 					if (index == -1){return}
 					if (row.isNewRecord){
 						dg.datagrid('cancelEdit', index);
@@ -580,6 +578,13 @@
 											}
 										}
 									}
+									// 判断是否当前页最后一条数据
+									if(dg.datagrid("getRows").length==0){
+										// 分页，且大于第一页
+										if(dg.datagrid("options").pageSize && dg.datagrid("options").pageNumber>1){
+											dg.datagrid({"pageNumber":dg.datagrid("options").pageNumber-1});//刷新表格
+										}
+									}
 								}
 							});
 							
@@ -587,11 +592,28 @@
 							dg.datagrid('cancelEdit', index);
 							dg.datagrid('deleteRow', index);
 							opts.onDestroy.call(dg[0], index, row);
+							// 判断是否当前页最后一条数据
+							if(dg.datagrid("getRows").length==0){
+								// 分页，且大于第一页
+								if(dg.datagrid("options").pageSize && dg.datagrid("options").pageNumber>1){
+									dg.datagrid({"pageNumber":dg.datagrid("options").pageNumber-1});//刷新表格
+								}
+							}
 						}
+						
+						
 					}
+					
+					
+					
 				}
+				
+				
 			});
 		}
+		
+		
+		
 	};
 	
 	$.fn.edatagrid.defaults = $.extend({}, $.fn.datagrid.defaults, {

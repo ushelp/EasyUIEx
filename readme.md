@@ -6,7 +6,7 @@ EasyUIEx 是针对使用 `jQuery EasyUI` 框架开发的扩展性插件，主要
 EasyUIEx is for the use of ` jQuery EasyUI`  framework for the development of extensible plug-ins, mainly for common functions `EasyUI` framework encapsulates and expanded. Focusing encapsulates CRUD aspect extensions, can greatly increase the `EasyUI` usability, simplify operational complexity, and provide additional functionality.
 
 
-Least version: `2.2.2`
+Least version: `2.2.3`
 
 Test EasyUI version: `1.4.3`
 
@@ -45,7 +45,7 @@ Test EasyUI version: `1.4.3`
 
 <!-- **EasyUIEx** -->
 <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.2.js"></script>
+<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.3.js"></script>
 <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
 <!-- EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' -->
 <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>
@@ -86,7 +86,12 @@ Test EasyUI version: `1.4.3`
     );
     ```
 
+## API online/在线 API 速览
 
+[中文 API 在线速览](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_zh_CN.html)
+
+
+[English API online](http://www.easyproject.cn/easyuiex/doc/easyuiex-api_en.html)
 
 ## Use document/使用文档
 
@@ -109,6 +114,14 @@ Test EasyUI version: `1.4.3`
 [Comments](http://www.easyproject.cn/easyuiex/en/index.jsp#donation 'Comments')
 
 If you have more comments, suggestions or ideas, please contact me.
+
+
+## EasyUIEx Demo：
+
+[EasyUIEx demo online](http://www.easyproject.cn/easyUIExDemo 'EasyUIEx demo')
+
+[EasyEE](http://www.easyproject.cn/easyee 'EasyEE')
+
 
 ## End
 

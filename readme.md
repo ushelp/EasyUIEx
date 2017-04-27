@@ -6,7 +6,7 @@ EasyUIEx 是针对使用 `jQuery EasyUI` 框架开发的扩展性插件，主要
 EasyUIEx is for the use of ` jQuery EasyUI`  framework for the development of extensible plug-ins, mainly for common functions `EasyUI` framework encapsulates and expanded. Focusing encapsulates CRUD aspect extensions, can greatly increase the `EasyUI` usability, simplify operational complexity, and provide additional functionality.
 
 
-Least version: `2.2.3`
+Least version: `2.2.4`
 
 Test EasyUI version: `1.4.3`
 
@@ -45,7 +45,7 @@ Test EasyUI version: `1.4.3`
 
 <!-- **EasyUIEx** -->
 <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.3.js"></script>
+<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.4.js"></script>
 <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
 <!-- EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' -->
 <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>

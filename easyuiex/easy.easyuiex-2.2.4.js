@@ -1,7 +1,7 @@
 /**
  * EasyUIEx
  * 
- * Version 2.2.3
+ * Version 2.2.4
  * 
  * http://easyproject.cn https://github.com/ushelp
  * 
@@ -74,6 +74,10 @@
 	 * 保存新Tab打开前的所有Dialog，关闭Tab时，自动销毁多余的Dialog
 	 */
 	uiEx.globalDialogMap = {};
+	/**
+	 * 保存新Tab打开前的所有ContextMenu(easyui-menu)，关闭Tab时，自动销毁多余的ContextMenu
+	 */
+	uiEx.globalContextMenuMap = {};
 
 	/*
 	 * ################# 内容变量，缓存部分
@@ -476,6 +480,53 @@
 				p.onHeaderContextMenu = showHeaderMenu;
 			}
 		}
+	},
+	// 2.2.4+ 销毁 Tab 内元素
+	destoryTab=function(title){
+		
+		// 移除多余的window-shadow
+		$('.window-shadow:gt(0)').remove();
+		
+		if (uiEx.globalDialogMap[title]) {
+
+			var globalDialogs = "#"
+					+ uiEx.globalDialogMap[title].join("#") + "#";
+			$(".easyui-dialog").each(
+					function() {
+						// 检测是否是新创建的dialog
+						// 不包含在uiEx.globalDialogMap[title]中，则代表tab新创建的dialog，则销毁
+						if (globalDialogs.indexOf("#" + this.id
+								+ "#") == -1) {
+							
+							var dialogTemp=$('#' + this.id);
+							dialogTemp.dialog({
+								closed : true
+							})
+							dialogTemp.dialog('destroy', true);
+						}
+					})
+			// 清空globalDialogMap
+			uiEx.globalDialogMap[title] = new Array();
+		}
+		
+		if (uiEx.globalContextMenuMap[title]) {
+
+			var globalContextMenuss = "#"
+					+ uiEx.globalContextMenuMap[title].join("#") + "#";
+			$(".easyui-menu").each(
+					function() {
+						// 检测是否是新创建的menu
+						// 不包含在uiEx.globalContextMenuMap[title]中，则代表tab新创建的menu，则销毁
+						if (globalContextMenuss.indexOf("#" + this.id
+								+ "#") == -1) {
+							var contextMenuTemp=$('#' + this.id);
+							contextMenuTemp.menu('destroy');
+						}
+					})
+			// 清空globalContextMenuMap
+			uiEx.globalContextMenuMap[title] = new Array();
+		}
+		
 	}
 	;
 
@@ -946,29 +997,9 @@
 			// 当关闭tab时，检测globalDialogMap，自动destory销毁多出来的dialog，防止重复加载
 			tab.tabs({
 				onBeforeClose : function() {
-					if (uiEx.globalDialogMap[title]) {
-
-						var globalDialogs = "#"
-								+ uiEx.globalDialogMap[title].join("#") + "#";
-						$(".easyui-dialog").each(
-								function() {
-									// 检测是否是新创建的dialog
-									// 不包含在uiEx.globalDialogMap[title]中，则代表tab新创建的dialog，则销毁
-									if (globalDialogs.indexOf("#" + this.id
-											+ "#") == -1) {
-										
-										var dialogTemp=$('#' + this.id);
-										dialogTemp.dialog({
-											closed : true
-										})
-										dialogTemp.dialog('destroy', true);
-									}
-								})
-						// 清空globalDialogMap
-						uiEx.globalDialogMap[title] = new Array();
-					}
+					
+					destoryTab(title);
 					return true;
-
 				}
 			});
 
@@ -985,6 +1016,15 @@
 							uiEx.globalDialogMap[title] = new Array();
 						}
 						uiEx.globalDialogMap[title].push(this.id);
+					});
+					
+					$(".easyui-menu").each(function() {
+						// 记录打开当前tab时，已经存在的menu
+						// 当关闭tab时，自动destory销毁多出来的menu，防止重复加载
+						if (!uiEx.globalContextMenuMap[title]) {
+							uiEx.globalContextMenuMap[title] = new Array();
+						}
+						uiEx.globalContextMenuMap[title].push(this.id);
 					});
 					return true;
 				}
@@ -1024,7 +1064,11 @@
 	 *            选项卡选择器
 	 */
 	uiEx.reloadSelTab = function(tabSelector) {
-		$(tabSelector).tabs("getSelected").panel("refresh");
+		var tab=$(tabSelector).tabs("getSelected");
+		
+		destoryTab(tab.panel('options').title);
+		
+		tab.panel("refresh");
 	}
 
 	/**
@@ -1178,6 +1222,9 @@
 							}
 						});
 					} else if (item.name == "refresh") { // 刷新
+						
+						var title=curTab.panel("options").title;
+						destoryTab(title);
 						curTab.panel("refresh");
 					}
 					// 关闭需要关闭的选项卡

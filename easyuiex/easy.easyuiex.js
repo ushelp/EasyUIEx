@@ -1,7 +1,7 @@
 /**
  * EasyUIEx
  * 
- * Version 2.2.4
+ * Version 2.2.5
  * 
  * http://easyproject.cn https://github.com/ushelp
  * 
@@ -343,11 +343,13 @@
 	 */
 	showDatagridContextMenu = function(e, index, row) {
 		e.preventDefault();
-		$(this).datagrid('selectRow', index);
-		$($(this).datagrid('options').menuSelector).menu('show', {
-			left : e.pageX,
-			top : e.pageY
-		});
+		if (index != -1) {
+			$(this).datagrid('selectRow', index);
+			$($(this).datagrid('options').menuSelector).menu('show', {
+				left : e.pageX,
+				top : e.pageY
+			});
+		}
 	},
 	/**
 	 * 为treeGrid添加右键菜单 showContextMenu:true onContextMenu事件处理
@@ -362,11 +364,13 @@
 	 */
 	showTreegridContextMenu = function(e, row) {
 		e.preventDefault();
-		$(this).treegrid('select', row.id);
-		$($(this).treegrid('options').menuSelector).menu('show', {
-			left : e.pageX,
-			top : e.pageY
-		});
+		if (index != -1) {
+			$(this).treegrid('select', row.id);
+			$($(this).treegrid('options').menuSelector).menu('show', {
+				left : e.pageX,
+				top : e.pageY
+			});
+		}
 	},
 	/**
 	 * 表头添加右键菜单，可选择显示的列 showHeaderContextMenu :true onHeaderContextMenu事件处理
@@ -513,15 +517,16 @@
 
 			var globalContextMenuss = "#"
 					+ uiEx.globalContextMenuMap[title].join("#") + "#";
-			$(".easyui-menu").each(
+			// 排除 tabsMenu 公用的菜单
+			$(".easyui-menu").not("#tabsMenu").each(
 					function() {
-						// 检测是否是新创建的menu
-						// 不包含在uiEx.globalContextMenuMap[title]中，则代表tab新创建的menu，则销毁
-						if (globalContextMenuss.indexOf("#" + this.id
-								+ "#") == -1) {
-							var contextMenuTemp=$('#' + this.id);
-							contextMenuTemp.menu('destroy');
-						}
+							// 检测是否是新创建的menu
+							// 不包含在uiEx.globalContextMenuMap[title]中，则代表tab新创建的menu，则销毁
+							if (globalContextMenuss.indexOf("#" + this.id
+									+ "#") == -1) {
+								var contextMenuTemp=$('#' + this.id);
+								contextMenuTemp.menu('destroy');
+							}
 					})
 			// 清空globalContextMenuMap
 			uiEx.globalContextMenuMap[title] = new Array();

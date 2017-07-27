@@ -23,7 +23,7 @@ With the use of `easy.jquery.edatagrid.js` instead of` jquery.edatagrid.js`, eas
 
 <!-- **EasyUIEx** -->
 <link rel="stylesheet" type="text/css" href="easyuiex/css/easyuiex.css">
-<script type="text/javascript" src="easyuiex/easy.easyuiex.min-2.2.4.js"></script>
+<script type="text/javascript" src="easyuiex/easy.easyuiex.min.js"></script>
 <script type="text/javascript" src="easyuiex/easy.easyuiex-validate.js"></script>
 <!-- EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' -->
 <script type="text/javascript" src="easyuiex/easy.jquery.edatagrid.js"></script>

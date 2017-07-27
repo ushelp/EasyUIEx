@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\workspace-sts-3.8.1.RELEASE\easyUIExDemo\github\doc\.readme_en.md.html</title>
+<title>D:\workspace\workspace-sts-3.8.4.RELEASE\easyUIExDemo\github\doc\.readme_en.md.html</title>
 
 
 <style type="text/css">
@@ -657,7 +657,7 @@ function setDocumentScrollTop(ypos)
 
 <span class="pl-c"><span class="pl-c">&lt;!--</span> **EasyUIEx** <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>stylesheet<span class="pl-pds">&quot;</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/css<span class="pl-pds">&quot;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/css/easyuiex.css<span class="pl-pds">&quot;</span></span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.easyuiex.min-2.2.4.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.easyuiex.min.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.easyuiex-validate.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 <span class="pl-c"><span class="pl-c">&lt;!--</span> EasyUIEx 'easy.jquery.edatagrid.js' instead of 'jquery.edatagrid.js' <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text/javascript<span class="pl-pds">&quot;</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyuiex/easy.jquery.edatagrid.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
@@ -667,10 +667,10 @@ function setDocumentScrollTop(ypos)
 <h2> <a id="2-easyuiex-api-invoke" class="anchor" href="#2-easyuiex-api-invoke" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. EasyUIEx API Invoke</h2> 
 <p><strong>uiEx</strong> is the default namespace name EasyUIEx of. EasyUIEx API for DOM operation in extended function with selector selectors are supported calls in two ways.</p> 
 <blockquote> 
- <p>*<em>Note: Please set id attribute for dom element. *</em> </p> 
+ <p>**Note: Please set id attribute for dom element. **</p> 
 </blockquote> 
 <ul> 
- <li> <p><strong>Directly within uiEx namespace</strong></p> <p>The first argument is dom selector.</p> <p><code>uiEx.{methodName}(selector, [param1], ....);</code> </p> 
+ <li> <p><strong>Directly within uiEx namespace</strong></p> <p>The first argument is dom selector.</p> <p><code>uiEx.{methodName}(selector, [param1], ....);</code></p> 
   <div class="highlight highlight-source-js">
    <pre><span class="pl-smi">uiEx</span>.<span class="pl-en">clearForm</span>(<span class="pl-s"><span class="pl-pds">'</span>#userForm<span class="pl-pds">'</span></span>)；
 
@@ -699,252 +699,263 @@ function setDocumentScrollTop(ypos)
 <p><a href="http://www.easyproject.cn/easyuiex/doc/easyuiex-api_en.html">English API online</a></p> 
 <h3> <a id="31-global-configuration-parameters" class="anchor" href="#31-global-configuration-parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.1. Global configuration parameters</h3> 
 <ul> 
- <li> <p><strong>Message international configuration</strong></p> <p>Modify in lang / easy.easyuiex-lang-<code>LANG_COUNTRY</code>.js</p> </li> 
- <li> <p><strong>Global configuration parameters</strong></p> <p>can be adjusted EasyUIEx operating parameters, methods and content, modify parameters:</p> <p><code>uiEx.{paramName} = paramValue</code></p> <p>See note specific role, the following default configuration:</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-k">var</span> uiEx <span class="pl-k">=</span> {
-  <span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">   * ################# Message content and control section</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  showRowEditMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c"><span class="pl-c">//</span> After editing the line whether prompt msg</span>
-  showRowAddMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c"><span class="pl-c">//</span> Whether to add the line after the prompt msg</span>
-  showRowDeleteMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Whether to delete the line after the prompt msg</span>
-  <span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">   * ################# The default parameters to customize the message box</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  msgDefaults <span class="pl-k">:</span> {
-      timeout <span class="pl-k">:</span> <span class="pl-c1">4000</span>,
-      showType <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>slide<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">//</span> null、slide、fade、show。 Default is slide。</span>
-  <span class="pl-c"><span class="pl-c">//</span> width:250,</span>
-  <span class="pl-c"><span class="pl-c">//</span> height:100,</span>
-
-  },
-  <span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">   * ################# Data Grid default parameters</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  dataGridDefaults <span class="pl-k">:</span> {
-      rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Show Line Numbers</span>
-      fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Automatically expand or shrink the size of the column width to fit the grid and prevent the horizontal scroll bar</span>
-      singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Single Select</span>
-      pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Display pagination</span>
-      method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span> Submit Information</span>
-      striped <span class="pl-k">:</span> <span class="pl-c1">true</span>
-  <span class="pl-c"><span class="pl-c">//</span> Form stripes, alternating row colors parity</span>
-  },
-  <span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">   * ################# Data Grid default parameters detailed view</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  detailDataGridDefaults <span class="pl-k">:</span> {
-      rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Show Line Numbers</span>
-      fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Automatically expand or shrink the size of the column width to fit the grid and prevent the horizontal scroll bar</span>
-      singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Single Select</span>
-      pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Display pagination</span>
-      method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span> Submit Information</span>
-      striped <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Form stripes, alternating row colors parity</span>
-      <span class="pl-c"><span class="pl-c">//</span> Return line detail content formatting functions</span>
-      <span class="pl-en">detailFormatter</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">index</span>, <span class="pl-smi">row</span>) {
-          <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;div class=&quot;ddv&quot;&gt;&lt;/div&gt;<span class="pl-pds">'</span></span>;
-      }
-  },
-  <span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">   * ################# url use {expression} expression used when parsing regular</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  expReg <span class="pl-k">:</span><span class="pl-sr"> <span class="pl-pds">/</span><span class="pl-cce">\{</span>(<span class="pl-c1">[<span class="pl-c1">\s\S</span>]</span><span class="pl-k">+?</span>)<span class="pl-cce">\}</span><span class="pl-pds">/</span>g</span>,
-  <span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">   * ################# Verify prompt message</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  msg <span class="pl-k">:</span> {}
-};</pre>
-  </div> </li> 
+ <li><strong>Message international configuration</strong></li> 
 </ul> 
+<p>Modify in lang / easy.easyuiex-lang-<code>LANG_COUNTRY</code>.js</p> 
+<ul> 
+ <li><strong>Global configuration parameters</strong></li> 
+</ul> 
+<p>can be adjusted EasyUIEx operating parameters, methods and content, modify parameters:</p> 
+<p><code>uiEx.{paramName} = paramValue</code></p> 
+<p>See note specific role, the following default configuration:</p> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-k">var</span> uiEx <span class="pl-k">=</span> {
+	<span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">	 * ################# Message content and control section</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	showRowEditMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c"><span class="pl-c">//</span> After editing the line whether prompt msg</span>
+	showRowAddMsg <span class="pl-k">:</span> <span class="pl-c1">false</span>, <span class="pl-c"><span class="pl-c">//</span> Whether to add the line after the prompt msg</span>
+	showRowDeleteMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Whether to delete the line after the prompt msg</span>
+	<span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">	 * ################# The default parameters to customize the message box</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	msgDefaults <span class="pl-k">:</span> {
+		timeout <span class="pl-k">:</span> <span class="pl-c1">4000</span>,
+		showType <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>slide<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">//</span> null、slide、fade、show。 Default is slide。</span>
+	<span class="pl-c"><span class="pl-c">//</span> width:250,</span>
+	<span class="pl-c"><span class="pl-c">//</span> height:100,</span>
+	 
+	},
+	<span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">	 * ################# Data Grid default parameters</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	dataGridDefaults <span class="pl-k">:</span> {
+		rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Show Line Numbers</span>
+		fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Automatically expand or shrink the size of the column width to fit the grid and prevent the horizontal scroll bar</span>
+		singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Single Select</span>
+		pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Display pagination</span>
+		method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span> Submit Information</span>
+		striped <span class="pl-k">:</span> <span class="pl-c1">true</span>
+	<span class="pl-c"><span class="pl-c">//</span> Form stripes, alternating row colors parity</span>
+	},
+	<span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">	 * ################# Data Grid default parameters detailed view</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	detailDataGridDefaults <span class="pl-k">:</span> {
+		rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Show Line Numbers</span>
+		fitColumns <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Automatically expand or shrink the size of the column width to fit the grid and prevent the horizontal scroll bar</span>
+		singleSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Single Select</span>
+		pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Display pagination</span>
+		method <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>post<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span> Submit Information</span>
+		striped <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Form stripes, alternating row colors parity</span>
+		<span class="pl-c"><span class="pl-c">//</span> Return line detail content formatting functions</span>
+		<span class="pl-en">detailFormatter</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">index</span>, <span class="pl-smi">row</span>) {
+			<span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;div class=&quot;ddv&quot;&gt;&lt;/div&gt;<span class="pl-pds">'</span></span>;
+		}
+	},
+	<span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">	 * ################# url use {expression} expression used when parsing regular</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	expReg <span class="pl-k">:</span><span class="pl-sr"> <span class="pl-pds">/</span><span class="pl-cce">\{</span>(<span class="pl-c1">[<span class="pl-c1">\s\S</span>]</span><span class="pl-k">+?</span>)<span class="pl-cce">\}</span><span class="pl-pds">/</span>g</span>,
+	<span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">	 * ################# Verify prompt message</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	msg <span class="pl-k">:</span> {}
+};</pre>
+</div> 
 <h3> <a id="32-messager-api" class="anchor" href="#32-messager-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.2. Messager API</h3> 
 <div class="highlight highlight-source-js">
- <pre>  <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">   * alert</span>
-<span class="pl-c">   * </span>
-<span class="pl-c">   * <span class="pl-k">@param</span> msg Message Content</span>
-<span class="pl-c">   * <span class="pl-k">@param</span> type Message Icon Type: error, info, question, warning</span>
-<span class="pl-c">   * <span class="pl-k">@param</span> callback Callback</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  <span class="pl-smi">uiEx</span>.<span class="pl-c1">alert</span>(msg, type, callback);
+ <pre><span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c"> * alert</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">msg</span> Message Content</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">type</span> Message Icon Type: error, info, question, warning</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">callback</span> Callback</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-smi">uiEx</span>.<span class="pl-c1">alert</span>(msg, type, callback);
+ 
+<span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c"> * confirm</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">msg</span> Message Content</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">callback</span> Callback</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-smi">uiEx</span>.<span class="pl-c1">confirm</span>(msg, callback);
 
-  <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">   * confirm</span>
-<span class="pl-c">   * </span>
-<span class="pl-c">   * <span class="pl-k">@param</span> msg Message Content</span>
-<span class="pl-c">   * <span class="pl-k">@param</span> callback Callback</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  <span class="pl-smi">uiEx</span>.<span class="pl-c1">confirm</span>(msg, callback);
+<span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c"> * prompt</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">msg</span> 消Message Content</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">callback</span> Callback</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-smi">uiEx</span>.<span class="pl-c1">prompt</span>(msg, callback);
 
-  <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">   * prompt</span>
-<span class="pl-c">   * </span>
-<span class="pl-c">   * <span class="pl-k">@param</span> msg 消Message Content</span>
-<span class="pl-c">   * <span class="pl-k">@param</span> callback Callback</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  <span class="pl-smi">uiEx</span>.<span class="pl-c1">prompt</span>(msg, callback);
-
-  <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">   * msg</span>
-<span class="pl-c">   * </span>
-<span class="pl-c">   * <span class="pl-k">@param</span> msg Message Content</span>
-<span class="pl-c">   * <span class="pl-k">@param</span> position topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight; Default is bottomRight</span>
-<span class="pl-c">   * <span class="pl-k">@param</span> params msg The message box parameters</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  <span class="pl-smi">uiEx</span>.<span class="pl-en">msg</span>(msg, position, params);</pre>
+<span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c"> * msg</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">msg</span> Message Content</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">position</span> topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight; Default is bottomRight</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">params</span> msg The message box parameters</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-smi">uiEx</span>.<span class="pl-en">msg</span>(msg, position, params);</pre>
 </div> 
 <h3> <a id="33-dialog-api" class="anchor" href="#33-dialog-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.3 dialog API</h3> 
 <ul> 
- <li><p>Two ways to call</p></li> 
- <li> <p>Dialog EasyUI need to solve the problem defined in the global page, when you close a tab inside the loaded automatically destroyed Tab Dialog</p> 
-  <blockquote> 
-   <p>Closed tab, specify loaded automatically destroyed dialog, to prevent the repeated loading. Since the Dialog EasyUI after the label closed and will not be destroyed (easyUI when parsing dialog, regardless of where the definition dialog will be put body), so in order to prevent duplicate tab page defined at each load, usually by The following approaches: 1, the dialog into the main interface, rather than through the tab to load 2, refresh the tab through the time off to be destroyed before the dialog</p> 
-  </blockquote> </li> 
- <li> <p>API</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* show Dialog</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> dialogSelector dialog selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> title </span>
-<span class="pl-c">* <span class="pl-k">@return</span> dialog object</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+ <li> <p>Two ways to call</p> </li> 
+ <li> <p>Dialog EasyUI need to solve the problem defined in the global page, when you close a tab inside the loaded automatically destroyed Tab Dialog</p> </li> 
+</ul> 
+<blockquote> 
+ <p>Closed tab, specify loaded automatically destroyed dialog, to prevent the repeated loading. Since the Dialog EasyUI after the label closed and will not be destroyed (easyUI when parsing dialog, regardless of where the definition dialog will be put body), so in order to prevent duplicate tab page defined at each load, usually by The following approaches: 1, the dialog into the main interface, rather than through the tab to load 2, refresh the tab through the time off to be destroyed before the dialog</p> 
+</blockquote> 
+<ul> 
+ <li>API</li> 
+</ul> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c"> * show Dialog</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">dialogSelector</span> dialog selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">title</span> </span>
+<span class="pl-c"> * <span class="pl-k">@return</span> dialog object</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openDialog</span>(dialogSelector, title);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* show href in dialog</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> dialogSelector dialog selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> href the request href</span>
-<span class="pl-c">* <span class="pl-k">@param</span> title </span>
-<span class="pl-c">* <span class="pl-k">@return</span> dialog object</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * show href in dialog</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">dialogSelector</span> dialog selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">href</span> the request href</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">title</span> </span>
+<span class="pl-c"> * <span class="pl-k">@return</span> dialog object</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openHrefDialog</span>(dialogSelector, href, title)
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* close Dialog</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> dialogSelector dialog selector</span>
-<span class="pl-c">* <span class="pl-k">@return</span> dialog object</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * close Dialog</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">dialogSelector</span> dialog selector</span>
+<span class="pl-c"> * <span class="pl-k">@return</span> dialog object</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">closeDialog</span>(dialogSelector);</pre>
-  </div> </li> 
-</ul> 
+</div> 
 <h3> <a id="34-form-api" class="anchor" href="#34-form-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.4. form API</h3> 
 <ul> 
- <li><p>Two ways to call</p></li> 
- <li> <p>Ajax form submit <code>EasyUIEx.submitAjax</code> and<code>EasyUIEx.submitURLAjax</code> encapsulated in a <code>xRequestedWith = XMLHttpRequest</code> parameters will be submitted along with the form to the server, the server side to help developers through<code></code>xRequestedWith parameter to determine whether the Ajax request.</p> 
-  <blockquote> 
-   <p>Submit EasyUI form components of form submission method has certain confusing and misleading. Its internal use of the iframe submit submit, is not really Ajax submission. So when a user on the server side when trying to pass the request header information (X-Requested-With = XMLHttpRequest) to determine whether a request submitted by Ajax, and can not accurately judge.</p> 
-  </blockquote> <p>Meanwhile, uiEx Ajax form submission provides a global event handlers <code>formSubmitSuccess</code>, Ajax form submission can monitor the success of the event, registered global handler.</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">* EasyUIEx.submitAjax and EasyUIEx.submitURLAjax form using form submission succes successful global event registered a system must perform the function</span>
-<span class="pl-c">* Global ajaxSuccess function similar to jQuery</span>
-<span class="pl-c">* @param data Data form submitted to the successful return of Ajax data</span>
-<span class="pl-c">*</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+ <li> <p>Two ways to call</p> </li> 
+ <li> <p>Ajax form submit <code>EasyUIEx.submitAjax</code> and<code>EasyUIEx.submitURLAjax</code> encapsulated in a <code>xRequestedWith = XMLHttpRequest</code> parameters will be submitted along with the form to the server, the server side to help developers through<code></code>xRequestedWith parameter to determine whether the Ajax request.</p> </li> 
+</ul> 
+<blockquote> 
+ <p>Submit EasyUI form components of form submission method has certain confusing and misleading. Its internal use of the iframe submit submit, is not really Ajax submission. So when a user on the server side when trying to pass the request header information (X-Requested-With = XMLHttpRequest) to determine whether a request submitted by Ajax, and can not accurately judge.</p> 
+</blockquote> 
+<p>Meanwhile, uiEx Ajax form submission provides a global event handlers <code>formSubmitSuccess</code>, Ajax form submission can monitor the success of the event, registered global handler.</p> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c"> * EasyUIEx.submitAjax and EasyUIEx.submitURLAjax form using form submission succes successful global event registered a system must perform the function</span>
+<span class="pl-c">  * Global ajaxSuccess function similar to jQuery</span>
+<span class="pl-c"> * @param data Data form submitted to the successful return of Ajax data</span>
+<span class="pl-c"> *</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">formSubmitSuccess</span><span class="pl-k">=</span><span class="pl-k">function</span>(<span class="pl-smi">data</span>){
-  <span class="pl-c"><span class="pl-c">//</span>...</span>
+	<span class="pl-c"><span class="pl-c">//</span>...</span>
 }</pre>
-  </div> </li> 
- <li> <p>API</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Clear form</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> selector  </span>
-<span class="pl-c">* <span class="pl-k">@return</span> form</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+</div> 
+<ul> 
+ <li>API</li> 
+</ul> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c"> * Clear form</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">selector</span>  </span>
+<span class="pl-c"> * <span class="pl-k">@return</span> form</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">clearForm</span>(selector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Reset form</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> selector</span>
-<span class="pl-c">* <span class="pl-k">@return</span> form</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Reset form</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">selector</span></span>
+<span class="pl-c"> * <span class="pl-k">@return</span> form</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">resetForm</span>(selector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Enable validate</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> selector </span>
-<span class="pl-c">* <span class="pl-k">@return</span> form</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Enable validate</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">selector</span> </span>
+<span class="pl-c"> * <span class="pl-k">@return</span> form</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">enableValidate</span>(selector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Disable validate</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> selector </span>
-<span class="pl-c">* <span class="pl-k">@return</span> form</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Disable validate</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">selector</span> </span>
+<span class="pl-c"> * <span class="pl-k">@return</span> form</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">disableValidate</span>(selector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* To validate form</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> selector </span>
-<span class="pl-c">* <span class="pl-k">@return</span> form</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * To validate form</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">selector</span> </span>
+<span class="pl-c"> * <span class="pl-k">@return</span> form</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">validate</span>(selector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Instead of the form (&quot;load&quot;, data); for form filling data</span>
-<span class="pl-c">* You can specify the form name prefix, will fill the data to the specified prefix attribute to</span>
-<span class="pl-c">* As the name attribute value data in the fill to user.name</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> selector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> data form data</span>
-<span class="pl-c">* <span class="pl-k">@param</span> prefix form element name suffix</span>
-<span class="pl-c">* <span class="pl-k">@return</span> form</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Instead of the form (&quot;load&quot;, data); for form filling data</span>
+<span class="pl-c"> * You can specify the form name prefix, will fill the data to the specified prefix attribute to</span>
+<span class="pl-c"> * As the name attribute value data in the fill to user.name</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">selector</span> </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">data</span> form data</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">prefix</span> form element name suffix</span>
+<span class="pl-c"> * <span class="pl-k">@return</span> form</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">loadForm</span>(selector, data, prefix);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Common form submit</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> formSelector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params  Optional; additional submission form parameter form</span>
-<span class="pl-c">* <span class="pl-k">@param</span> noValidate Optional; Verify; boolean; default is true</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Common form submit</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">formSelector</span> </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">params</span>  Optional; additional submission form parameter form</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">noValidate</span> Optional; Verify; boolean; default is true</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">submitForm</span>(formSelector, params, noValidate);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Band with Ajax form validation form submission, internal encapsulates a `xRequestedWith = XMLHttpRequest` parameters;</span>
-<span class="pl-c">* Will be submitted along with the form to the server, help developers to determine whether the server through Ajax request parameter `` xRequestedWith.</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> formSelector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> callback </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params Optional; additional submission form parameter form</span>
-<span class="pl-c">* <span class="pl-k">@param</span> noValidate Optional; Verify; boolean; default is true</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Band with Ajax form validation form submission, internal encapsulates a `xRequestedWith = XMLHttpRequest` parameters;</span>
+<span class="pl-c"> * Will be submitted along with the form to the server, help developers to determine whether the server through Ajax request parameter `` xRequestedWith.</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">formSelector</span> </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">callback</span> </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">params</span> Optional; additional submission form parameter form</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">noValidate</span> Optional; Verify; boolean; default is true</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">submitAjax</span>(formSelector, callback, params, noValidate);
-
+ 
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Band with Ajax form validation form submission, internal encapsulates a `xRequestedWith = XMLHttpRequest` parameters;</span>
 <span class="pl-c">* Will be submitted along with the form to the server, help developers to determine whether the server through Ajax request parameter `` xRequestedWith.</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> formSelector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> url </span>
-<span class="pl-c">* <span class="pl-k">@param</span> callback </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params Optional; additional submission form parameter form</span>
-<span class="pl-c">* <span class="pl-k">@param</span> noValidate Optional; Verify; boolean; default is true</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">formSelector</span> </span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">url</span> </span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">callback</span> </span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">params</span> Optional; additional submission form parameter form</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">noValidate</span> Optional; Verify; boolean; default is true</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">submitURLAjax</span>(formSelector, url, callback, params, noValidate) 
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Will form form information formatted as JSON return</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* @parama formSelector </span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Will form form information formatted as JSON return</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * @parama formSelector </span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">serializeJSON</span>(formSelector);</pre>
-  </div> </li> 
-</ul> 
+</div> 
 <h3> <a id="35-tabs-api" class="anchor" href="#35-tabs-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.5. tabs API</h3> 
 <ul> 
- <li><p>Two ways to call</p></li> 
+ <li> <p>Two ways to call</p> </li> 
  <li> <p>The difference between the two dynamic EasyUI Tabs dynamic loading between:</p> 
   <ul> 
    <li>Use content (iframe frame) into the page: 
@@ -962,23 +973,24 @@ function setDocumentScrollTop(ypos)
      <li>A reference to the page can not have a body, otherwise the loaded content inside of JS file execution grammar</li> 
      <li>Html rendering prompt resolution displays</li> 
     </ul> </li> 
-   <li> <p>Context menu HTML snippet:</p> 
-    <div class="highlight highlight-text-html-basic">
-     <pre>&lt;%-- ##################Tab Tab context menu can not be deleted################## --%&gt;
+  </ul> </li> 
+ <li> <p>Context menu HTML snippet:</p> 
+  <div class="highlight highlight-text-html-basic">
+   <pre>&lt;%-- ##################Tab Tab context menu can not be deleted################## --%&gt;
 &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>tabsMenu<span class="pl-pds">&quot;</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui-menu<span class="pl-pds">&quot;</span></span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>width:120px;<span class="pl-pds">&quot;</span></span>&gt;
-       &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>close<span class="pl-pds">&quot;</span></span>   <span class="pl-e">data-options</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>iconCls:'icon-close'<span class="pl-pds">&quot;</span></span>&gt;close&lt;/<span class="pl-ent">div</span>&gt;  
-       &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>other<span class="pl-pds">&quot;</span></span>   <span class="pl-e">data-options</span>=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>&gt;close others&lt;/<span class="pl-ent">div</span>&gt;  
-       &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>all<span class="pl-pds">&quot;</span></span>  <span class="pl-e">data-options</span>=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>&gt;close all&lt;/<span class="pl-ent">div</span>&gt;
-       &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>menu-sep<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+	   &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>close<span class="pl-pds">&quot;</span></span>   <span class="pl-e">data-options</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>iconCls:'icon-close'<span class="pl-pds">&quot;</span></span>&gt;close&lt;/<span class="pl-ent">div</span>&gt;  
+	   &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>other<span class="pl-pds">&quot;</span></span>   <span class="pl-e">data-options</span>=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>&gt;close others&lt;/<span class="pl-ent">div</span>&gt;  
+	   &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>all<span class="pl-pds">&quot;</span></span>  <span class="pl-e">data-options</span>=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>&gt;close all&lt;/<span class="pl-ent">div</span>&gt;
+	   &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>menu-sep<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
        &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>closeRight<span class="pl-pds">&quot;</span></span>&gt;close right&lt;/<span class="pl-ent">div</span>&gt;
        &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>closeLeft<span class="pl-pds">&quot;</span></span>&gt;close left&lt;/<span class="pl-ent">div</span>&gt;
        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>menu-sep<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
       &lt;<span class="pl-ent">div</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>refresh<span class="pl-pds">&quot;</span></span>  <span class="pl-e">data-options</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>iconCls:'icon-reload'<span class="pl-pds">&quot;</span></span>&gt;refresh&lt;/<span class="pl-ent">div</span>&gt; 
 &lt;/<span class="pl-ent">div</span>&gt;</pre>
-    </div> </li> 
-   <li> <p>API</p> 
-    <div class="highlight highlight-source-js">
-     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
+  </div> </li> 
+ <li> <p>API</p> 
+  <div class="highlight highlight-source-js">
+   <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c"> * Add a tab for a specified Tab, supports double-click to close</span>
 <span class="pl-c"> * </span>
 <span class="pl-c"> * @parma tabSelector </span>
@@ -994,18 +1006,18 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c"> * Refresh the current tab selected Panel</span>
 <span class="pl-c"> * </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> tabSelector </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSelector</span> </span>
 <span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">reloadSelTab</span>(tabSelector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c"> * Text automatically at specified according to the menu to open a menu Tab</span>
 <span class="pl-c"> * </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> menuSelector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuSelector</span></span>
 <span class="pl-c"> *            </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> tabSeelctor</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSeelctor</span></span>
 <span class="pl-c"> *            </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> menuText</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuText</span></span>
 <span class="pl-c"> *            To open the menu text, you can use an array to define a plurality of menu text</span>
 <span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuByText</span>(menuSelector, tabSeelctor, menuText);
@@ -1013,11 +1025,11 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c"> * Id according to the menu automatically at specified Tab to open a menu</span>
 <span class="pl-c"> * </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> menuSelector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuSelector</span></span>
 <span class="pl-c"> *            </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> tabSeelctor</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSeelctor</span></span>
 <span class="pl-c"> *            </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> menuId</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuId</span></span>
 <span class="pl-c"> *            To open the menu id, you can use an array to define multiple menu id</span>
 <span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuById</span>(menuSelector, tabSelctor, menuId);
@@ -1025,488 +1037,509 @@ function setDocumentScrollTop(ypos)
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c"> * Binding tabs of the right-click menu, to achieve: close, close other, close all; Close the left tab close tabs to the right; refreshing the menu function</span>
 <span class="pl-c"> * </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> tabSelector </span>
-<span class="pl-c"> * <span class="pl-k">@param</span> menuSelector menu selector; Optional, the default of the #tabsMenu</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSelector</span> </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuSelector</span> menu selector; Optional, the default of the #tabsMenu</span>
 <span class="pl-c"> * </span>
 <span class="pl-c"> * You must be defined in the page context menu label (menu id, name of the menu item can not be changed):</span>
 <span class="pl-c">&lt;%-- ##################Tab Tab context menu can not be deleted################## --%&gt;</span>
 <span class="pl-c">&lt;div id=&quot;tabsMenu&quot; class=&quot;easyui-menu&quot; style=&quot;width:120px;&quot;&gt;</span>
-<span class="pl-c">       &lt;div name=&quot;close&quot;   data-options=&quot;iconCls:'icon-close'&quot;&gt;close&lt;/div&gt;  </span>
-<span class="pl-c">       &lt;div name=&quot;other&quot;   data-options=&quot;&quot;&gt;close others&lt;/div&gt;  </span>
-<span class="pl-c">       &lt;div name=&quot;all&quot;  data-options=&quot;&quot;&gt;close all&lt;/div&gt;</span>
-<span class="pl-c">       &lt;div class=&quot;menu-sep&quot;&gt;&lt;/div&gt;</span>
-<span class="pl-c">       &lt;div name=&quot;closeRight&quot;&gt;close right&lt;/div&gt;</span>
-<span class="pl-c">       &lt;div name=&quot;closeLeft&quot;&gt;close left&lt;/div&gt;</span>
-<span class="pl-c">       &lt;div class=&quot;menu-sep&quot;&gt;&lt;/div&gt;</span>
-<span class="pl-c">      &lt;div name=&quot;refresh&quot;  data-options=&quot;iconCls:'icon-reload'&quot;&gt;refresh&lt;/div&gt; </span>
+<span class="pl-c">     &lt;div name=&quot;close&quot;   data-options=&quot;iconCls:'icon-close'&quot;&gt;close&lt;/div&gt;  </span>
+<span class="pl-c">     &lt;div name=&quot;other&quot;   data-options=&quot;&quot;&gt;close others&lt;/div&gt;  </span>
+<span class="pl-c">     &lt;div name=&quot;all&quot;  data-options=&quot;&quot;&gt;close all&lt;/div&gt;</span>
+<span class="pl-c">     &lt;div class=&quot;menu-sep&quot;&gt;&lt;/div&gt;</span>
+<span class="pl-c">     &lt;div name=&quot;closeRight&quot;&gt;close right&lt;/div&gt;</span>
+<span class="pl-c">     &lt;div name=&quot;closeLeft&quot;&gt;close left&lt;/div&gt;</span>
+<span class="pl-c">     &lt;div class=&quot;menu-sep&quot;&gt;&lt;/div&gt;</span>
+<span class="pl-c">    &lt;div name=&quot;refresh&quot;  data-options=&quot;iconCls:'icon-reload'&quot;&gt;refresh&lt;/div&gt; </span>
 <span class="pl-c">&lt;/div&gt;</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  <span class="pl-smi">uiEx</span>.<span class="pl-en">addTabsContextMenu</span>(tabSelector, menuSelector)</pre>
-    </div> </li> 
-  </ul> </li> 
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-smi">uiEx</span>.<span class="pl-en">addTabsContextMenu</span>(tabSelector, menuSelector)</pre>
+  </div> </li> 
 </ul> 
 <h4> <a id="6-datagridedatagriddetaildatagrid-api" class="anchor" href="#6-datagridedatagriddetaildatagrid-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6. datagrid、edatagrid、detaildatagrid API</h4> 
 <ul> 
- <li><p>Two ways to call</p></li> 
- <li><p><strong>Package and extended</strong>: EasyUIEx related components for the use of datagrid depth CRUD application package, provides additional functionality, when you call the Initialization method, with the incoming <code>url</code>,<code>saveUrl</code>, <code>updateUrl</code>,<code>destroyUrl</code> address and other CRUD server operating parameters (and edatagrid the parameters remain the same), can be in a consistent manner by means of API EasyUIEx complete CRUD operations.</p></li> 
- <li><p><strong>Performance Optimization</strong>: the datagrid and edatagrid provides line editing condition monitoring, optimization request to modify. When line editing, column editing, does not submit a request unmodified content.</p></li> 
- <li> <p><strong>rowData returns the parameter</strong>: </p> <p>When adding or modifying data, you can return a <code>rowData</code> attribute in the<code>JSON</code> response, and EasyUIEx automatically refreshes the static data for the page that was added or edited based on the contents of <code>rowData</code>.</p> <p>For example, when adding data, if the current data primary key is submitted to the server side after the generation (such as the data key by the automatic growth generator control), add data, in the return of <code>JSON</code> set a <strong>rowData</strong> Property, which returns the most recent data that contains the <code>primary key id attribute</code> (other properties are optionally optional if no refresh is required) to automatically refresh the newly added front row. <strong>Otherwise, after the new data, delete the data, you have previously added data in the client does not have the primary key, there will be a failure to delete tips.</strong></p> 
+ <li> <p>Two ways to call</p> </li> 
+ <li> <p><strong>Package and extended</strong>: EasyUIEx related components for the use of datagrid depth CRUD application package, provides additional functionality, when you call the Initialization method, with the incoming <code>url</code>,<code>saveUrl</code>, <code>updateUrl</code>,<code>destroyUrl</code> address and other CRUD server operating parameters (and edatagrid the parameters remain the same), can be in a consistent manner by means of API EasyUIEx complete CRUD operations.</p> </li> 
+ <li> <p><strong>Performance Optimization</strong>: the datagrid and edatagrid provides line editing condition monitoring, optimization request to modify. When line editing, column editing, does not submit a request unmodified content.</p> </li> 
+ <li> <p><strong>rowData returns the parameter</strong>:</p> <p>When adding or modifying data, you can return a <code>rowData</code> attribute in the<code>JSON</code> response, and EasyUIEx automatically refreshes the static data for the page that was added or edited based on the contents of <code>rowData</code>.</p> <p>For example, when adding data, if the current data primary key is submitted to the server side after the generation (such as the data key by the automatic growth generator control), add data, in the return of <code>JSON</code> set a <strong>rowData</strong> Property, which returns the most recent data that contains the <code>primary key id attribute</code> (other properties are optionally optional if no refresh is required) to automatically refresh the newly added front row. <strong>Otherwise, after the new data, delete the data, you have previously added data in the client does not have the primary key, there will be a failure to delete tips.</strong></p> 
   <div class="highlight highlight-source-json">
-   <pre>{
-    <span class="pl-s"><span class="pl-pds">&quot;</span>msg<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>Save  Successed!<span class="pl-pds">&quot;</span></span>,
-    <span class="pl-s"><span class="pl-pds">&quot;</span>locationUrl<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>,
-    <span class="pl-s"><span class="pl-pds">&quot;</span>callback<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>,
-    <span class="pl-s"><span class="pl-pds">&quot;</span>statusCode<span class="pl-pds">&quot;</span></span>:<span class="pl-c1">200</span>,
-    <span class="pl-s"><span class="pl-pds">&quot;</span>rowData<span class="pl-pds">&quot;</span></span>:{<span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>:<span class="pl-c1">10</span>,<span class="pl-s"><span class="pl-pds">&quot;</span>dname<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>x<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>loc<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>x<span class="pl-pds">&quot;</span></span>} <span class="pl-ii">//</span> <span class="pl-ii">Returns</span> <span class="pl-ii">the</span> <span class="pl-ii">auto</span> <span class="pl-ii">increment</span> <span class="pl-ii">primary</span> <span class="pl-ii">key</span> <span class="pl-ii">to</span> <span class="pl-ii">update</span> <span class="pl-ii">the</span> <span class="pl-ii">client</span> <span class="pl-ii">data</span>
-}</pre>
+   <pre> {
+ 	<span class="pl-s"><span class="pl-pds">&quot;</span>msg<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>Save  Successed!<span class="pl-pds">&quot;</span></span>,
+ 	<span class="pl-s"><span class="pl-pds">&quot;</span>locationUrl<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>,
+ 	<span class="pl-s"><span class="pl-pds">&quot;</span>callback<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-pds">&quot;</span></span>,
+ 	<span class="pl-s"><span class="pl-pds">&quot;</span>statusCode<span class="pl-pds">&quot;</span></span>:<span class="pl-c1">200</span>,
+ 	<span class="pl-s"><span class="pl-pds">&quot;</span>rowData<span class="pl-pds">&quot;</span></span>:{<span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>:<span class="pl-c1">10</span>,<span class="pl-s"><span class="pl-pds">&quot;</span>dname<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>x<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>loc<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>x<span class="pl-pds">&quot;</span></span>} <span class="pl-ii">//</span> <span class="pl-ii">Returns</span> <span class="pl-ii">the</span> <span class="pl-ii">auto</span> <span class="pl-ii">increment</span> <span class="pl-ii">primary</span> <span class="pl-ii">key</span> <span class="pl-ii">to</span> <span class="pl-ii">update</span> <span class="pl-ii">the</span> <span class="pl-ii">client</span> <span class="pl-ii">data</span>
+ }</pre>
   </div> </li> 
- <li> <p>datagrid、edatagrid、detaildatagrid、treegrid Extended Attributes common</p> 
-  <table> 
-   <thead> 
-    <tr> 
-     <th>Name</th> 
-     <th>Type</th> 
-     <th>Description</th> 
-     <th>Default</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr> 
-     <td>url</td> 
-     <td>string</td> 
-     <td>Query url; get:<code>dg.datagrid(&quot;options&quot;).url</code> </td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>saveUrl</td> 
-     <td>string</td> 
-     <td>Save url；get：<code>dg.datagrid(&quot;options&quot;).saveUrl</code> </td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>updateUrl</td> 
-     <td>string</td> 
-     <td>Update url；get：<code>dg.datagrid(&quot;options&quot;).updateUrl</code> </td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>destroyUrl</td> 
-     <td>string</td> 
-     <td>Destory url；get：<code>dg.datagrid(&quot;options&quot;).destroyUrl</code> </td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>showHeaderContextMenu</td> 
-     <td>boolean</td> 
-     <td>Whether the meter display the context menu, choose to display a column</td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>showContextMenu</td> 
-     <td>boolean</td> 
-     <td>Whether to display the context menu, with menuSelector property use</td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>menuSelector</td> 
-     <td>string</td> 
-     <td>Menu Selector</td> 
-     <td>&nbsp;</td> 
-    </tr> 
-    <tr> 
-     <td>successKey</td> 
-     <td>string</td> 
-     <td>Success mark key returned by the server, for example: &quot;statusCode&quot;</td> 
-     <td>&nbsp;</td> 
-    </tr> 
-    <tr> 
-     <td>successValue</td> 
-     <td>string</td> 
-     <td>The server returned successfully labeled value, for example: &quot;200&quot;</td> 
-     <td>&nbsp;</td> 
-    </tr> 
-    <tr> 
-     <td>mutipleDelete</td> 
-     <td>boolean</td> 
-     <td>Whether to open a multi-line submission delete</td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>mutipleDeleteProperty</td> 
-     <td>string/Array</td> 
-     <td>Multi-line reference to the property and the value of the server will not delete sendRowDataPrefix prefix added, supports the use of an array to specify multiple attribute names</td> 
-     <td>&nbsp;</td> 
-    </tr> 
-   </tbody> 
-  </table> </li> 
- <li> <p>datagrid、edatagrid Extended Attributes common</p> 
-  <table> 
-   <thead> 
-    <tr> 
-     <th>Name</th> 
-     <th>Type</th> 
-     <th>Description</th> 
-     <th>Default</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr> 
-     <td>sendRowDataPrefix</td> 
-     <td>boolean</td> 
-     <td>Add, delete, update data, support setting submitting row data prefix <code>sendRowDataPrefix:&quot;. SysUser &quot;</code>, before the data parameter names such submission will increase the specified prefix, handy when using the Struts framework such as submitting data to sysUser object reception</td> 
-     <td>&nbsp;</td> 
-    </tr> 
-   </tbody> 
-  </table> </li> 
- <li> <p>datagrid</p> 
-  <table> 
-   <thead> 
-    <tr> 
-     <th>Name</th> 
-     <th>Type</th> 
-     <th>Description</th> 
-     <th>Default</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr> 
-     <td>clickRowEdit</td> 
-     <td>boolean</td> 
-     <td>When you click to achieve line editing in DataGrid, you can replace edatagrid achieve with line editing datagrid</td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>clickCellEdit</td> 
-     <td>boolean</td> 
-     <td>Click column editing function is turned on</td> 
-     <td>false</td> 
-    </tr> 
-   </tbody> 
-  </table> </li> 
- <li> <p>edatagrid Extended Attributes <strong>Use <code>easy.jquery.edatagrid.js</code> instead of <code>jquery.edatagrid.js</code>, easyUIEx of edatagrid performance and logic optimization, and provide additional functionality</strong>。</p> 
-  <table> 
-   <thead> 
-    <tr> 
-     <th>Name</th> 
-     <th>Type</th> 
-     <th>Description</th> 
-     <th>Default</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr> 
-     <td>clickEdit</td> 
-     <td>boolean</td> 
-     <td>Whether to open, click Edit (edatagrid default double-click to open editor)</td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>showMsg</td> 
-     <td>boolean</td> 
-     <td>Whether to add, modify alert message</td> 
-     <td>false</td> 
-    </tr> 
-   </tbody> 
-  </table> </li> 
- <li> <p>Demo</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">//</span> datagrid  Initialization</span>
+ <li> <p>datagrid、edatagrid、detaildatagrid、treegrid Extended Attributes common</p> </li> 
+</ul> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Name</th> 
+   <th>Type</th> 
+   <th>Description</th> 
+   <th>Default</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>url</td> 
+   <td>string</td> 
+   <td>Query url; get:<code>dg.datagrid(&quot;options&quot;).url</code> </td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>saveUrl</td> 
+   <td>string</td> 
+   <td>Save url；get：<code>dg.datagrid(&quot;options&quot;).saveUrl</code> </td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>updateUrl</td> 
+   <td>string</td> 
+   <td>Update url；get：<code>dg.datagrid(&quot;options&quot;).updateUrl</code> </td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>destroyUrl</td> 
+   <td>string</td> 
+   <td>Destory url；get：<code>dg.datagrid(&quot;options&quot;).destroyUrl</code> </td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>showHeaderContextMenu</td> 
+   <td>boolean</td> 
+   <td>Whether the meter display the context menu, choose to display a column</td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>showContextMenu</td> 
+   <td>boolean</td> 
+   <td>Whether to display the context menu, with menuSelector property use</td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>menuSelector</td> 
+   <td>string</td> 
+   <td>Menu Selector</td> 
+   <td>&nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td>successKey</td> 
+   <td>string</td> 
+   <td>Success mark key returned by the server, for example: &quot;statusCode&quot;</td> 
+   <td>&nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td>successValue</td> 
+   <td>string</td> 
+   <td>The server returned successfully labeled value, for example: &quot;200&quot;</td> 
+   <td>&nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td>mutipleDelete</td> 
+   <td>boolean</td> 
+   <td>Whether to open a multi-line submission delete</td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>mutipleDeleteProperty</td> 
+   <td>string/Array</td> 
+   <td>Multi-line reference to the property and the value of the server will not delete sendRowDataPrefix prefix added, supports the use of an array to specify multiple attribute names</td> 
+   <td>&nbsp;</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<ul> 
+ <li>datagrid、edatagrid Extended Attributes common</li> 
+</ul> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Name</th> 
+   <th>Type</th> 
+   <th>Description</th> 
+   <th>Default</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>sendRowDataPrefix</td> 
+   <td>boolean</td> 
+   <td>Add, delete, update data, support setting submitting row data prefix <code>sendRowDataPrefix:&quot;. SysUser &quot;</code>, before the data parameter names such submission will increase the specified prefix, handy when using the Struts framework such as submitting data to sysUser object reception</td> 
+   <td>&nbsp;</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<ul> 
+ <li>datagrid</li> 
+</ul> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Name</th> 
+   <th>Type</th> 
+   <th>Description</th> 
+   <th>Default</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>clickRowEdit</td> 
+   <td>boolean</td> 
+   <td>When you click to achieve line editing in DataGrid, you can replace edatagrid achieve with line editing datagrid</td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>clickCellEdit</td> 
+   <td>boolean</td> 
+   <td>Click column editing function is turned on</td> 
+   <td>false</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<ul> 
+ <li>edatagrid Extended Attributes <strong>Use <code>easy.jquery.edatagrid.js</code> instead of <code>jquery.edatagrid.js</code>, easyUIEx of edatagrid performance and logic optimization, and provide additional functionality</strong>。</li> 
+</ul> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Name</th> 
+   <th>Type</th> 
+   <th>Description</th> 
+   <th>Default</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>clickEdit</td> 
+   <td>boolean</td> 
+   <td>Whether to open, click Edit (edatagrid default double-click to open editor)</td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>showMsg</td> 
+   <td>boolean</td> 
+   <td>Whether to add, modify alert message</td> 
+   <td>false</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<ul> 
+ <li>Demo</li> 
+</ul> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">//</span> datagrid  Initialization</span>
 <span class="pl-k">var</span> dg <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysUserDataGrid<span class="pl-pds">&quot;</span></span>);
 <span class="pl-smi">dg</span>.<span class="pl-en">initDatagrid</span>({
-iconCls <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>icon-group<span class="pl-pds">'</span></span>,
-<span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c"> * DataGrid editing: saveUrl, updateUrl, destroyUrl with uiEx use</span>
-<span class="pl-c"> <span class="pl-c">*/</span></span>
-url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_list.action<span class="pl-pds">&quot;</span></span>,
-saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_save.action<span class="pl-pds">&quot;</span></span>,
-updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_update.action<span class="pl-pds">&quot;</span></span>,
-destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_delete.action<span class="pl-pds">&quot;</span></span>,
-showHeaderContextMenu<span class="pl-k">:</span><span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
-<span class="pl-c"><span class="pl-c">//</span> clickRowEdit:true, //Register Click-line editing, you can replace with line editing edatagrid implement CRUD</span>
-pageSize <span class="pl-k">:</span> <span class="pl-c1">10</span>,
-pageList <span class="pl-k">:</span> [ <span class="pl-c1">5</span>, <span class="pl-c1">10</span>, <span class="pl-c1">15</span>, <span class="pl-c1">20</span> ],
-checkbox <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-singleSelect <span class="pl-k">:</span> <span class="pl-c1">false</span>,
-checkOnSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-<span class="pl-c"><span class="pl-c">//</span> Double-click operation</span>
-<span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowIndex</span>, <span class="pl-smi">rowData</span>) {
-    <span class="pl-en">toEdit</span>(rowData);
-},
-menuSelector<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>#sysUserContextMenu<span class="pl-pds">&quot;</span></span>,
-showContextMenu<span class="pl-k">:</span><span class="pl-c1">true</span>,
-sendRowDataPrefix<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>sysUser.<span class="pl-pds">&quot;</span></span>,
-mutipleDelete<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Submit delete multiple rows</span>
-mutipleDeleteProperty<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>userId<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span> Multi-line reference to the property and the value of the server will not delete sendRowDataPrefix prefix added, supports the use of an array to specify multiple attribute names</span>
-});</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">//</span> edatagrid  Initialization</span>
-<span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#deptDataGrid<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initEdatagrid</span>({
+   iconCls <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>icon-group<span class="pl-pds">'</span></span>,
    <span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">    * DataGrid editing: saveUrl, updateUrl, destroyUrl with uiEx use</span>
 <span class="pl-c">    <span class="pl-c">*/</span></span>
-   url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_list.action<span class="pl-pds">&quot;</span></span>,
-   saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_save.action<span class="pl-pds">&quot;</span></span>,
-   updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_update.action<span class="pl-pds">&quot;</span></span>,
-   destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_delete.action<span class="pl-pds">&quot;</span></span>,
-   idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>,
-   showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
-   pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_list.action<span class="pl-pds">&quot;</span></span>,
+   saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_save.action<span class="pl-pds">&quot;</span></span>,
+   updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_update.action<span class="pl-pds">&quot;</span></span>,
+   destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysUser_delete.action<span class="pl-pds">&quot;</span></span>,
+   showHeaderContextMenu<span class="pl-k">:</span><span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
+   <span class="pl-c"><span class="pl-c">//</span> clickRowEdit:true, //Register Click-line editing, you can replace with line editing edatagrid implement CRUD</span>
+   pageSize <span class="pl-k">:</span> <span class="pl-c1">10</span>,
+   pageList <span class="pl-k">:</span> [ <span class="pl-c1">5</span>, <span class="pl-c1">10</span>, <span class="pl-c1">15</span>, <span class="pl-c1">20</span> ],
    checkbox <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-   checkOnSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>,
    singleSelect <span class="pl-k">:</span> <span class="pl-c1">false</span>,
-   autoSave <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-   <span class="pl-c"><span class="pl-c">//</span>queryParam:{&quot;rows&quot;:dg.datagrid(&quot;options&quot;).pageSize},</span>
-   clickEdit <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Click Edit</span>
-   showMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Show operation msg</span>
-   <span class="pl-c"><span class="pl-c">//</span>右键菜单</span>
-   menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#deptContextMenu<span class="pl-pds">&quot;</span></span>,
-   showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-   sendRowDataPrefix <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>submit data suffix</span>
-   successKey <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>statusCode<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Success marks the return key on the server side</span>
-   successValue <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>200<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span>Success marks the return value on the server side</span>
+   checkOnSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   <span class="pl-c"><span class="pl-c">//</span> Double-click operation</span>
+   <span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowIndex</span>, <span class="pl-smi">rowData</span>) {
+   	<span class="pl-en">toEdit</span>(rowData);
+   },
+   menuSelector<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>#sysUserContextMenu<span class="pl-pds">&quot;</span></span>,
+   showContextMenu<span class="pl-k">:</span><span class="pl-c1">true</span>,
+   sendRowDataPrefix<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>sysUser.<span class="pl-pds">&quot;</span></span>,
+   mutipleDelete<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Submit delete multiple rows</span>
+   mutipleDeleteProperty<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>userId<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span> Multi-line reference to the property and the value of the server will not delete sendRowDataPrefix prefix added, supports the use of an array to specify multiple attribute names</span>
 });</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">//</span> detaildatagrid  Initialization</span>
+</div> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">//</span> edatagrid  Initialization</span>
+<span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#deptDataGrid<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initEdatagrid</span>({
+    <span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">     * DataGrid editing: saveUrl, updateUrl, destroyUrl with uiEx use</span>
+<span class="pl-c">     <span class="pl-c">*/</span></span>
+    url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_list.action<span class="pl-pds">&quot;</span></span>,
+    saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_save.action<span class="pl-pds">&quot;</span></span>,
+    updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_update.action<span class="pl-pds">&quot;</span></span>,
+    destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept_delete.action<span class="pl-pds">&quot;</span></span>,
+    idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>deptno<span class="pl-pds">&quot;</span></span>,
+    showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
+    pagination <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    checkbox <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    checkOnSelect <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    singleSelect <span class="pl-k">:</span> <span class="pl-c1">false</span>,
+    autoSave <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    <span class="pl-c"><span class="pl-c">//</span>queryParam:{&quot;rows&quot;:dg.datagrid(&quot;options&quot;).pageSize},</span>
+    clickEdit <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Click Edit</span>
+    showMsg <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Show operation msg</span>
+    <span class="pl-c"><span class="pl-c">//</span>右键菜单</span>
+    menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#deptContextMenu<span class="pl-pds">&quot;</span></span>,
+    showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    sendRowDataPrefix <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>dept.<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>submit data suffix</span>
+    successKey <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>statusCode<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Success marks the return key on the server side</span>
+    successValue <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>200<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span>Success marks the return value on the server side</span>
+});</pre>
+</div> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">//</span> detaildatagrid  Initialization</span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initDetailDatagrid</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#userDataGrid2<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>do/toDetailEdit.jsp<span class="pl-pds">&quot;</span></span>,{
-<span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">* DataGrid editing: saveUrl, updateUrl, destroyUrl with uiEx use</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doList.jsp<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Datagrid query</span>
-saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=add<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Save</span>
-updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=edit&amp;id={id}<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Update</span>
-destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=delete<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Delete</span>
-iconCls <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>icon-group<span class="pl-pds">&quot;</span></span>,
-showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
-pageSize <span class="pl-k">:</span> <span class="pl-c1">5</span>,
-pageList <span class="pl-k">:</span> [ <span class="pl-c1">5</span>, <span class="pl-c1">10</span>, <span class="pl-c1">15</span>, <span class="pl-c1">20</span> ]
+   <span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">   * DataGrid editing: saveUrl, updateUrl, destroyUrl with uiEx use</span>
+<span class="pl-c">   <span class="pl-c">*/</span></span>
+   url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doList.jsp<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Datagrid query</span>
+   saveUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=add<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Save</span>
+   updateUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=edit&amp;id={id}<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Update</span>
+   destroyUrl <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>do/doMyUsers.jsp?t=delete<span class="pl-pds">&quot;</span></span>, <span class="pl-c"><span class="pl-c">//</span>Delete</span>
+   iconCls <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>icon-group<span class="pl-pds">&quot;</span></span>,
+   showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
+   pageSize <span class="pl-k">:</span> <span class="pl-c1">5</span>,
+   pageList <span class="pl-k">:</span> [ <span class="pl-c1">5</span>, <span class="pl-c1">10</span>, <span class="pl-c1">15</span>, <span class="pl-c1">20</span> ]
 });</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">//</span> treegrid  Initialization</span>
+</div> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">//</span> treegrid  Initialization</span>
 <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionDataGrid<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initTreegrid</span>({
-url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sysMenuPermission_list.action<span class="pl-pds">'</span></span>,
-rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,
-treeField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>,
-lines <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-<span class="pl-c"><span class="pl-c">//</span> Double-click operation</span>
-<span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowData</span>) {
-    <span class="pl-en">toEdit</span>(rowData);
-},
-<span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
-showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionContextMenu<span class="pl-pds">&quot;</span></span>,
-showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
+   url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sysMenuPermission_list.action<span class="pl-pds">'</span></span>,
+   rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,
+   treeField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>,
+   lines <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   <span class="pl-c"><span class="pl-c">//</span> Double-click operation</span>
+   <span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowData</span>) {
+   	<span class="pl-en">toEdit</span>(rowData);
+   },
+   <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
+   showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionContextMenu<span class="pl-pds">&quot;</span></span>,
+   showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 });</pre>
+</div> 
+<ul> 
+ <li> <p>API</p> </li> 
+ <li> <p>grid Initialization API</p> 
+  <div class="highlight highlight-source-js">
+   <pre></pre>
   </div> </li> 
- <li> <p>API</p> 
-  <ul> 
-   <li> <p>grid Initialization API</p> 
-    <div class="highlight highlight-source-js">
-     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* DataGrid: datagrid Initialization, It contains the default parameters uiEx.dataGridDefaults</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params Optional; datagrid Initialization parameters</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">initDatagrid</span>(datagridSelector, params);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* EditDataGrid: edatagrid Initialization, It contains the default parameters uiEx.dataGridDefaults</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params Optional; datagrid Initialization parameters</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">initEdatagrid</span>(datagridSelector, params);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* DetailDataGrid: DetailDataGrid Initialization, It contains the default parameters uiEx.detailDataGridDefaults</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> detailUrl Load detailed view url</span>
-<span class="pl-c">* <span class="pl-k">@param</span> params Optional; other parameters, including data CRUD the url address</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">initDetailDatagrid</span>(datagridSelector, detailUrl, params);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Treegird: Treegird Initialization</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treegridSelector</span>
-<span class="pl-c">*           </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params</span>
-<span class="pl-c">*            Optional; treegrid other parameters</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">initTreegrid</span>(treegridSelector, params); </pre>
-    </div> </li> 
-   <li> <p>datagrid CRUD API</p> 
-    <div class="highlight highlight-source-js">
-     <pre><span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">* ############## DataGrid CRUD</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">*  datagrid: To add a new row to row to edit DataGrid</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector </span>
-<span class="pl-c">* <span class="pl-k">@param</span> rowParam Optional; data parameters of the new data row</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">rowAdd</span>(datagridSelector, rowParam);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* datagrid: DataGrid for the specified line editing is enabled, it will cause a new load</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector  </span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">rowEdit</span>(datagridSelector);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Cancel edit the selected row</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
-<span class="pl-c">*           </span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">rowCancelEdit</span>(datagridSelector)；
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* datagird, edatagrid, detaildatagrid, treegrid: delete the selected row, supports multi-row delete parameters mutipleDelete</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
-<span class="pl-c">*            </span>
-<span class="pl-c">* <span class="pl-k">@param</span> showMsg</span>
-<span class="pl-c">*            Optional; boolean value, whether a message is displayed, it will override the default parameter values global uiEx.showRowDeleteMsg</span>
-<span class="pl-c">* <span class="pl-k">@param</span> reloadDataGrid</span>
-<span class="pl-c">*           Optional; if reload reload DataGrid, default is false</span>
-<span class="pl-c">* <span class="pl-k">@param</span> successKey</span>
-<span class="pl-c">*            可Selected; the string value, perform a successful return to the mark key, value must be the same as before representatives successValue deleted successfully</span>
-<span class="pl-c">* <span class="pl-k">@param</span> successValue</span>
-<span class="pl-c">*            Optional; String value, execution marks the successful return value</span>
-<span class="pl-c">* <span class="pl-k">@param</span> callback</span>
-<span class="pl-c">*            Optional; After the successful implementation of the callback function, the server-side parameters for the return of data</span>
-<span class="pl-c">*  - demo：</span>
-<span class="pl-c">*  dg.rowDelete(true, false, &quot;statusCode&quot;, &quot;200&quot;);</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">rowDelete</span>(datagridSelector,  showMsg, reloadDataGrid, successKey, successValue)；</pre>
-    </div> </li> 
-   <li> <p>DetailDataGrid API</p> 
-    <div class="highlight highlight-source-js">
-     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* DetailDataGrid: DetailDataGrid add the line</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector </span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">detailRowAdd</span>(datagridSelector);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* DetailDataGrid: DetailDataGrid edit save</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> index Edit line index, when loading detailed data, index value will be submitted to the server directly from the server to get the request parameters passed to the function</span>
-<span class="pl-c">*            For example, JSP : uiEx.detailRowSave('#userDataGrid',${param.index})</span>
-<span class="pl-c">* <span class="pl-k">@param</span> showMsg Optional; whether to display a message</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">detailRowSave</span>(datagridSelector, index, showMsg);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* DetailDataGrid: DetailDataGrid cancel edit or add</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> index Edit line index, when loading detailed data, index value will be submitted to the server directly from the server to get the request parameters passed to the function</span>
-<span class="pl-c">*            For example, JSP : uiEx.detailRowCancel('#userDataGrid',${param.index})</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">detailRowCancel</span>(datagridSelector, index);</pre>
-    </div> </li> 
-   <li> <p>Edatagrid API</p> 
-    <div class="highlight highlight-source-js">
-     <pre><span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* edatagrid, start editing, direct Click Edit, do not need to double-click to open the Edit</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
-<span class="pl-c">*            </span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">beginEditGrid</span>(datagridSelector);
-
-<span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* edatagrid, finish editing into editable Unlike disableEditing editing disabled, you can not edit editing disabled</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> datagridSelector</span>
-<span class="pl-c">*            </span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">endEditGrid</span>(datagridSelector);</pre>
-    </div> </li> 
-  </ul> </li> 
 </ul> 
+<p>/**</p> 
+<ul> 
+ <li>DataGrid: datagrid Initialization, It contains the default parameters uiEx.dataGridDefaults</li> 
+ <li> </li> 
+ <li>@param datagridSelector</li> 
+ <li>@param params Optional; datagrid Initialization parameters */ uiEx.initDatagrid(datagridSelector, params);</li> 
+</ul> 
+<p>/**</p> 
+<ul> 
+ <li>EditDataGrid: edatagrid Initialization, It contains the default parameters uiEx.dataGridDefaults</li> 
+ <li> </li> 
+ <li>@param datagridSelector</li> 
+ <li>@param params Optional; datagrid Initialization parameters */ uiEx.initEdatagrid(datagridSelector, params);</li> 
+</ul> 
+<p>/**</p> 
+<ul> 
+ <li>DetailDataGrid: DetailDataGrid Initialization, It contains the default parameters uiEx.detailDataGridDefaults</li> 
+ <li> </li> 
+ <li>@param datagridSelector</li> 
+ <li>@param detailUrl Load detailed view url</li> 
+ <li>@param params Optional; other parameters, including data CRUD the url address */ uiEx.initDetailDatagrid(datagridSelector, detailUrl, params);</li> 
+</ul> 
+<p>/**</p> 
+<ul> 
+ <li>Treegird: Treegird Initialization</li> 
+ <li> </li> 
+ <li>@param treegridSelector</li> 
+ <li> </li> 
+ <li>@param params</li> 
+ <li> <pre><code>       Optional; treegrid other parameters
+</code></pre> </li> 
+</ul> 
+<p>*/ uiEx.initTreegrid(treegridSelector, params);</p> 
+<pre><code>
+- datagrid CRUD API
+
+  ```javascript
+/*
+* ############## DataGrid CRUD
+*/
+/**
+ *  datagrid: To add a new row to row to edit DataGrid
+ * 
+ * @param datagridSelector 
+ * @param rowParam Optional; data parameters of the new data row
+ */
+uiEx.rowAdd(datagridSelector, rowParam);
+
+/**
+ * datagrid: DataGrid for the specified line editing is enabled, it will cause a new load
+ * 
+ * @param datagridSelector  
+ */
+uiEx.rowEdit(datagridSelector);
+
+/**
+ * Cancel edit the selected row
+ * 
+ * @param datagridSelector
+ *           
+ */
+uiEx.rowCancelEdit(datagridSelector)；
+
+/**
+ * datagird, edatagrid, detaildatagrid, treegrid: delete the selected row, supports multi-row delete parameters mutipleDelete
+ * 
+ * @param datagridSelector
+ *            
+ * @param showMsg
+ *            Optional; boolean value, whether a message is displayed, it will override the default parameter values global uiEx.showRowDeleteMsg
+ * @param reloadDataGrid
+ *           Optional; if reload reload DataGrid, default is false
+ * @param successKey
+ *            可Selected; the string value, perform a successful return to the mark key, value must be the same as before representatives successValue deleted successfully
+ * @param successValue
+ *            Optional; String value, execution marks the successful return value
+ * @param callback
+ *            Optional; After the successful implementation of the callback function, the server-side parameters for the return of data
+ *  - demo：
+ *  dg.rowDelete(true, false, &quot;statusCode&quot;, &quot;200&quot;);
+ */
+uiEx.rowDelete(datagridSelector,  showMsg, reloadDataGrid, successKey, successValue)；
+</code></pre> 
+<ul> 
+ <li> <p>DetailDataGrid API</p> 
+  <div class="highlight highlight-source-js">
+   <pre></pre>
+  </div> </li> 
+</ul> 
+<p>/**</p> 
+<ul> 
+ <li>DetailDataGrid: DetailDataGrid add the line</li> 
+ <li> </li> 
+ <li>@param datagridSelector */ uiEx.detailRowAdd(datagridSelector);</li> 
+</ul> 
+<p>/**</p> 
+<ul> 
+ <li>DetailDataGrid: DetailDataGrid edit save</li> 
+ <li> </li> 
+ <li>@param datagridSelector</li> 
+ <li>@param index Edit line index, when loading detailed data, index value will be submitted to the server directly from the server to get the request parameters passed to the function</li> 
+ <li> <pre><code>       For example, JSP : uiEx.detailRowSave('#userDataGrid',${param.index})
+</code></pre> </li> 
+ <li>@param showMsg Optional; whether to display a message */ uiEx.detailRowSave(datagridSelector, index, showMsg);</li> 
+</ul> 
+<p>/**</p> 
+<ul> 
+ <li>DetailDataGrid: DetailDataGrid cancel edit or add</li> 
+ <li> </li> 
+ <li>@param datagridSelector</li> 
+ <li>@param index Edit line index, when loading detailed data, index value will be submitted to the server directly from the server to get the request parameters passed to the function</li> 
+ <li> <pre><code>       For example, JSP : uiEx.detailRowCancel('#userDataGrid',${param.index})
+</code></pre> </li> 
+</ul> 
+<p>*/ uiEx.detailRowCancel(datagridSelector, index);</p> 
+<pre><code>
+- Edatagrid API
+
+ ```JS
+  /**
+   * edatagrid, start editing, direct Click Edit, do not need to double-click to open the Edit
+   * 
+   * @param datagridSelector
+   *            
+   */
+  uiEx.beginEditGrid(datagridSelector);
+
+  /**
+   * edatagrid, finish editing into editable Unlike disableEditing editing disabled, you can not edit editing disabled
+   * 
+   * @param datagridSelector
+   *            
+   */
+  uiEx.endEditGrid(datagridSelector);
+</code></pre> 
 <h3> <a id="37-treegrid-api" class="anchor" href="#37-treegrid-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.7. treegrid API</h3> 
 <ul> 
- <li><p>Two ways to call</p></li> 
- <li> <p>Supports tree rendering using the <code>parentId</code> attribute</p> 
-  <blockquote> 
-   <p>EasyUI The default tree constructs use the <code>children array</code>. EasyUIEx allows the <code>parentId attribute</code> to be used to represent and render tree components.</p> 
-  </blockquote> </li> 
- <li> <p>Extended Attributes</p> 
-  <table> 
-   <thead> 
-    <tr> 
-     <th>Name</th> 
-     <th>Type</th> 
-     <th>Description</th> 
-     <th>Default</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr> 
-     <td>showHeaderContextMenu</td> 
-     <td>boolean</td> 
-     <td>Whether the meter display the context menu, choose to display a column</td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>showContextMenu</td> 
-     <td>boolean</td> 
-     <td>Whether to display the context menu, with menuSelector property use</td> 
-     <td>false</td> 
-    </tr> 
-    <tr> 
-     <td>menuSelector</td> 
-     <td>string</td> 
-     <td>Menu Selector</td> 
-     <td>&nbsp;</td> 
-    </tr> 
-   </tbody> 
-  </table> </li> 
- <li> <p>Demo</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionDataGrid<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initTreegrid</span>({
-url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sysMenuPermission_list.action<span class="pl-pds">'</span></span>,
-rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,
-treeField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>,
-lines <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-<span class="pl-c"><span class="pl-c">//</span> Double-click operation</span>
-<span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowData</span>) {
-    <span class="pl-en">toEdit</span>(rowData);
-},
-<span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
-showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
-menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionContextMenu<span class="pl-pds">&quot;</span></span>,
-showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
+ <li> <p>Two ways to call</p> </li> 
+ <li> <p>Supports tree rendering using the <code>parentId</code> attribute</p> </li> 
+</ul> 
+<blockquote> 
+ <p>EasyUI The default tree constructs use the <code>children array</code>. EasyUIEx allows the <code>parentId attribute</code> to be used to represent and render tree components.</p> 
+</blockquote> 
+<ul> 
+ <li>Extended Attributes</li> 
+</ul> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Name</th> 
+   <th>Type</th> 
+   <th>Description</th> 
+   <th>Default</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>showHeaderContextMenu</td> 
+   <td>boolean</td> 
+   <td>Whether the meter display the context menu, choose to display a column</td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>showContextMenu</td> 
+   <td>boolean</td> 
+   <td>Whether to display the context menu, with menuSelector property use</td> 
+   <td>false</td> 
+  </tr> 
+  <tr> 
+   <td>menuSelector</td> 
+   <td>string</td> 
+   <td>Menu Selector</td> 
+   <td>&nbsp;</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<ul> 
+ <li>Demo</li> 
+</ul> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionDataGrid<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initTreegrid</span>({
+   url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>sysMenuPermission_list.action<span class="pl-pds">'</span></span>,
+   rownumbers <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   idField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,
+   treeField <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>,
+   lines <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   <span class="pl-c"><span class="pl-c">//</span> Double-click operation</span>
+   <span class="pl-en">onDblClickRow</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">rowData</span>) {
+   	<span class="pl-en">toEdit</span>(rowData);
+   },
+   <span class="pl-c"><span class="pl-c">//</span> Header add context menu, choose to display a column</span>
+   showHeaderContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>,
+   menuSelector <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>#sysMenuPermissionContextMenu<span class="pl-pds">&quot;</span></span>,
+   showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 });</pre>
-  </div> 
-  <div class="highlight highlight-text-html-basic">
-   <pre><span class="pl-c"><span class="pl-c">&lt;!--</span> Collapse and expand the current directory <span class="pl-c">--&gt;</span></span>
+</div> 
+<div class="highlight highlight-text-html-basic">
+ <pre><span class="pl-c"><span class="pl-c">&lt;!--</span> Collapse and expand the current directory <span class="pl-c">--&gt;</span></span>
 &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>sysMenuRightContextMenu<span class="pl-pds">&quot;</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui-menu<span class="pl-pds">&quot;</span></span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>width:120px;<span class="pl-pds">&quot;</span></span>&gt;
-&lt;<span class="pl-ent">div</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>uiEx.collapse('#sysMenuRightDataGrid')<span class="pl-pds">&quot;</span></span>&gt;Collapse&lt;/<span class="pl-ent">div</span>&gt;
-&lt;<span class="pl-ent">div</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>uiEx.expand('#sysMenuRightDataGrid')<span class="pl-pds">&quot;</span></span>&gt;Expand&lt;/<span class="pl-ent">div</span>&gt;
+   &lt;<span class="pl-ent">div</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>uiEx.collapse('#sysMenuRightDataGrid')<span class="pl-pds">&quot;</span></span>&gt;Collapse&lt;/<span class="pl-ent">div</span>&gt;
+   &lt;<span class="pl-ent">div</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>uiEx.expand('#sysMenuRightDataGrid')<span class="pl-pds">&quot;</span></span>&gt;Expand&lt;/<span class="pl-ent">div</span>&gt;
 &lt;/<span class="pl-ent">div</span>&gt;</pre>
-  </div> </li> 
+</div> 
+<ul> 
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
    <pre><span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Treegird: Treegird Initialization</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treegridSelector</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treegridSelector</span></span>
 <span class="pl-c">*            </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">params</span></span>
 <span class="pl-c">*            Optional; treegrid other parameters</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTreegrid</span>(treegridSelector, params)
@@ -1514,23 +1547,23 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Treegird: Use parentId attribute rendering Treegird Initialization</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treegridSelector</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treegridSelector</span></span>
 <span class="pl-c">*            </span>
-<span class="pl-c">* <span class="pl-k">@param</span> params</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">params</span></span>
 <span class="pl-c">*            Optional; treegrid other parameters</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initParentIdTreegrid</span>(treegridSelector, params)
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Collapse the select folder</span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeGridSelector  </span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeGridSelector</span>  </span>
 <span class="pl-c">* </span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-c1">collapse</span>(treeGridSelector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Expand the select folder</span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeGridSelector  </span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeGridSelector</span>  </span>
 <span class="pl-c">* </span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-c1">expand</span>(treeGridSelector);</pre>
@@ -1538,85 +1571,81 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 </ul> 
 <h4> <a id="38-tree-api" class="anchor" href="#38-tree-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.8. tree API</h4> 
 <ul> 
- <li><p>Two ways to call</p></li> 
- <li><p>Supports tree rendering using the <code>parentId</code> attribute</p></li> 
- <li><p>Support Tabs binding</p></li> 
- <li> <p>Extended Attributes</p> 
-  <table> 
-   <thead> 
-    <tr> 
-     <th>Name</th> 
-     <th>Type</th> 
-     <th>Description</th> 
-     <th>Default</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr> 
-     <td>expandChilds</td> 
-     <td>boolean</td> 
-     <td>Click to expand menu parent child node function</td> 
-     <td>false</td> 
-    </tr> 
-   </tbody> 
-  </table> </li> 
+ <li> <p>Two ways to call</p> </li> 
+ <li> <p>Supports tree rendering using the <code>parentId</code> attribute</p> </li> 
+ <li> <p>Support Tabs binding</p> </li> 
+ <li> <p>Extended Attributes</p> </li> 
+</ul> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Name</th> 
+   <th>Type</th> 
+   <th>Description</th> 
+   <th>Default</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>expandChilds</td> 
+   <td>boolean</td> 
+   <td>Click to expand menu parent child node function</td> 
+   <td>false</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<ul> 
  <li> <p>Demo</p> 
   <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">//</span>Common tree menu Initialization</span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">initTree</span>(
-<span class="pl-s"><span class="pl-pds">&quot;</span>#menu<span class="pl-pds">&quot;</span></span>,  <span class="pl-c"><span class="pl-c">//</span>Tree menu selector</span>
-<span class="pl-s"><span class="pl-pds">&quot;</span>#tabs<span class="pl-pds">&quot;</span></span>,  <span class="pl-c"><span class="pl-c">//</span>Open the menu tree url of tabSelector</span>
-   <span class="pl-c"><span class="pl-c">//</span>Other tree parameters</span>
-{
-    expandChilds<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span>Click the parent menu, expand the submenu</span>
-    data<span class="pl-k">:</span> <span class="pl-smi">EasySSH</span>.<span class="pl-smi">menuTreeJson</span>
-   <span class="pl-c"><span class="pl-c">//</span>url : &quot;json/menuTree.json.js&quot;, </span>
-}
-);</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">//</span>Text automatically opens the specified menu</span>
-<span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuByText</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#menu<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>#tabs<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>CRUD<span class="pl-pds">&quot;</span></span>);</pre>
+   <pre></pre>
   </div> </li> 
+</ul> 
+<p>//Common tree menu Initialization uiEx.initTree( &quot;#menu&quot;, //Tree menu selector &quot;#tabs&quot;, //Open the menu tree url of tabSelector //Other tree parameters { expandChilds: true, //Click the parent menu, expand the submenu data: EasySSH.menuTreeJson //url : &quot;json/menuTree.json.js&quot;, } );</p> 
+<pre><code>
+  ```javascript
+  //Text automatically opens the specified menu
+  uiEx.openMenuByText(&quot;#menu&quot;,&quot;#tabs&quot;,&quot;CRUD&quot;);
+</code></pre> 
+<ul> 
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
    <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* ############## Tree </span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Tree: tree Initialization, contains two default functionality:</span>
-<span class="pl-c">* 1. Click on the menu to open the parent node child node function</span>
-<span class="pl-c">* 2. Click on the menu open in tabSelector specified tab</span>
-<span class="pl-c">* 3. tab, double-click to close</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> tabSelector  Open the menu tree url of tab selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> params Optional; tree Initialization parameters</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Tree: tree Initialization, contains two default functionality:</span>
+<span class="pl-c"> * 1. Click on the menu to open the parent node child node function</span>
+<span class="pl-c"> * 2. Click on the menu open in tabSelector specified tab</span>
+<span class="pl-c"> * 3. tab, double-click to close</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span></span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSelector</span>  Open the menu tree url of tab selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">params</span> Optional; tree Initialization parameters</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTree</span>(treeSelector, tabSelector, params);
 
   <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Tree: Use parentId attribute rendering tree Initialization, contains two default functionality:</span>
-<span class="pl-c">* 1. Click on the menu to open the parent node child node function</span>
-<span class="pl-c">* 2. Click on the menu open in tabSelector specified tab</span>
-<span class="pl-c">* 3. tab, double-click to close</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> tabSelector  Open the menu tree url of tab selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> params Optional; tree Initialization parameters</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Tree: Use parentId attribute rendering tree Initialization, contains two default functionality:</span>
+<span class="pl-c"> * 1. Click on the menu to open the parent node child node function</span>
+<span class="pl-c"> * 2. Click on the menu open in tabSelector specified tab</span>
+<span class="pl-c"> * 3. tab, double-click to close</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span></span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSelector</span>  Open the menu tree url of tab selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">params</span> Optional; tree Initialization parameters</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initParentIdTree</span>(treeSelector, tabSelector, params);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* onSelect event processing: achieving Tree of onSelect event, to achieve click menu to open the parent node when the child node function tree Initialization incoming event by registering onSelect</span>
-<span class="pl-c">* onSelect : uiEx.expandChilds, //Click to open the sub-menu parent node functionality</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* By initTree of expandChilds property can achieve the same effect:</span>
-<span class="pl-c">* expandChilds: true; </span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> node</span>
-<span class="pl-c">*            Click on the node object passed when the event call</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * onSelect event processing: achieving Tree of onSelect event, to achieve click menu to open the parent node when the child node function tree Initialization incoming event by registering onSelect</span>
+<span class="pl-c"> * onSelect : uiEx.expandChilds, //Click to open the sub-menu parent node functionality</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * By initTree of expandChilds property can achieve the same effect:</span>
+<span class="pl-c"> * expandChilds: true; </span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">node</span></span>
+<span class="pl-c"> *            Click on the node object passed when the event call</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">expandChilds</span>(node);</pre>
   </div> </li> 
  <li> <p>Binding tabs associated API</p> 
@@ -1625,150 +1654,155 @@ showContextMenu <span class="pl-k">:</span> <span class="pl-c1">true</span>
 <span class="pl-c">* ############## Tree Menu open to tab</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Text automatically at specified according to the menu to open a menu Tab</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> menuSelector menu selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> tabSeelctor tab selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> menuText  To open the menu text, you can use an array to define a plurality of menu text</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Text automatically at specified according to the menu to open a menu Tab</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuSelector</span> menu selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSeelctor</span> tab selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuText</span>  To open the menu text, you can use an array to define a plurality of menu text</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuByText</span>(menuSelector, tabSelector, menuText);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">* Id according to the menu automatically at specified Tab to open a menu</span>
-<span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> menuSelector menu selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> tabSeelctor tab selector</span>
-<span class="pl-c">* <span class="pl-k">@param</span> menuId To open the menu id, you can use an array to define multiple menu id</span>
-<span class="pl-c"><span class="pl-c">*/</span></span>
+<span class="pl-c"> * Id according to the menu automatically at specified Tab to open a menu</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuSelector</span> menu selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">tabSeelctor</span> tab selector</span>
+<span class="pl-c"> * <span class="pl-k">@param</span> <span class="pl-smi">menuId</span> To open the menu id, you can use an array to define multiple menu id</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">openMenuById</span>(menuSelector, tabSelctor, menuId);</pre>
   </div> </li> 
 </ul> 
 <h3> <a id="39-checkbox-tree-api" class="anchor" href="#39-checkbox-tree-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.9. Checkbox tree API</h3> 
 <ul> 
- <li><p>Two ways to call</p></li> 
- <li><p>Supports tree rendering using the <code>parentId</code> attribute</p></li> 
- <li> <p>Extended Attributes</p> 
-  <table> 
-   <thead> 
-    <tr> 
-     <th>Name</th> 
-     <th>Type</th> 
-     <th>Description</th> 
-     <th>Default</th> 
-    </tr> 
-   </thead> 
-   <tbody> 
-    <tr> 
-     <td>showTitle</td> 
-     <td>string</td> 
-     <td>Mouse serving individual title prompts, you can specify the attributes displayed</td> 
-     <td>&nbsp;</td> 
-    </tr> 
-    <tr> 
-     <td>noChildCascadeCheck</td> 
-     <td>boolean</td> 
-     <td>Cascade Select parent, but the parent does not cascade selected select child nodes. And cascadeCheck: true will cause the parent node is selected automatically select all child nodes.</td> 
-     <td>false</td> 
-    </tr> 
-   </tbody> 
-  </table> </li> 
- <li> <p>Demo</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
+ <li> <p>Two ways to call</p> </li> 
+ <li> <p>Supports tree rendering using the <code>parentId</code> attribute</p> </li> 
+ <li> <p>Extended Attributes</p> </li> 
+</ul> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Name</th> 
+   <th>Type</th> 
+   <th>Description</th> 
+   <th>Default</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td>showTitle</td> 
+   <td>string</td> 
+   <td>Mouse serving individual title prompts, you can specify the attributes displayed</td> 
+   <td>&nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td>noChildCascadeCheck</td> 
+   <td>boolean</td> 
+   <td>Cascade Select parent, but the parent does not cascade selected select child nodes. And cascadeCheck: true will cause the parent node is selected automatically select all child nodes.</td> 
+   <td>false</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<ul> 
+ <li>Demo</li> 
+</ul> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* Checkbox tree Initialization</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>).<span class="pl-en">initTreeChk</span>(
-      <span class="pl-c"><span class="pl-c">//</span>Loading parameters tree</span>
-      {
-          url<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>do/menuJson.jsp<span class="pl-pds">&quot;</span></span>  <span class="pl-c"><span class="pl-c">//</span>Get Tree JSON data</span>
-      },
-      [<span class="pl-c1">11</span>] <span class="pl-c"><span class="pl-c">//</span>The default value of the array is selected</span>
+       <span class="pl-c"><span class="pl-c">//</span>Loading parameters tree</span>
+       {
+           url<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>do/menuJson.jsp<span class="pl-pds">&quot;</span></span>  <span class="pl-c"><span class="pl-c">//</span>Get Tree JSON data</span>
+       },
+       [<span class="pl-c1">11</span>] <span class="pl-c"><span class="pl-c">//</span>The default value of the array is selected</span>
 );</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
+</div> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">*  Initialization Rights check box</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTreeChk</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysRoleEditRights<span class="pl-pds">&quot;</span></span>, {
-  url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysMenuRight_listAll.action<span class="pl-pds">&quot;</span></span>,
-  checkbox<span class="pl-k">:</span><span class="pl-c1">true</span>,
-  animate<span class="pl-k">:</span><span class="pl-c1">true</span>,
-  lines<span class="pl-k">:</span><span class="pl-c1">true</span>,
-  noChildCascadeCheck<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span>Cascade Select parent, but the parent does not cascade selected select child nodes</span>
-  showTitle<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>remark<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span>The remark attribute as a title display</span>
+   url <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>sysMenuRight_listAll.action<span class="pl-pds">&quot;</span></span>,
+   checkbox<span class="pl-k">:</span><span class="pl-c1">true</span>,
+   animate<span class="pl-k">:</span><span class="pl-c1">true</span>,
+   lines<span class="pl-k">:</span><span class="pl-c1">true</span>,
+   noChildCascadeCheck<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c"><span class="pl-c">//</span>Cascade Select parent, but the parent does not cascade selected select child nodes</span>
+   showTitle<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>remark<span class="pl-pds">&quot;</span></span> <span class="pl-c"><span class="pl-c">//</span>The remark attribute as a title display</span>
 }, <span class="pl-smi">data</span>.<span class="pl-smi">list</span>);</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
+</div> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* Reset</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">rights</span>.<span class="pl-en">resetTree</span><span class="pl-k">=</span><span class="pl-k">function</span>(){
-  <span class="pl-smi">uiEx</span>.<span class="pl-en">treeChkRest</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>);
+   <span class="pl-smi">uiEx</span>.<span class="pl-en">treeChkRest</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>);
 }</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
+</div> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* Submit</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">rights</span>.<span class="pl-en">submit</span><span class="pl-k">=</span><span class="pl-k">function</span>(){
-  <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsForm<span class="pl-pds">&quot;</span></span>).<span class="pl-en">submitAjax</span>(<span class="pl-k">function</span>(<span class="pl-smi">data</span>){
-          <span class="pl-en">console</span>.<span class="pl-c1">info</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Submitted successfully<span class="pl-pds">&quot;</span></span>);
-      },
-      <span class="pl-c"><span class="pl-c">//</span>With rightsForm form is submitted to the server with the selected parameters --Checkbox tree node id list (# separated)</span>
-      {
-          ids<span class="pl-k">:</span><span class="pl-smi">uiEx</span>.<span class="pl-en">getCheckedIds</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>).<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#<span class="pl-pds">&quot;</span></span>)
-      }
-  );
+   <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsForm<span class="pl-pds">&quot;</span></span>).<span class="pl-en">submitAjax</span>(<span class="pl-k">function</span>(<span class="pl-smi">data</span>){
+           <span class="pl-en">console</span>.<span class="pl-c1">info</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Submitted successfully<span class="pl-pds">&quot;</span></span>);
+       },
+       <span class="pl-c"><span class="pl-c">//</span>With rightsForm form is submitted to the server with the selected parameters --Checkbox tree node id list (# separated)</span>
+       {
+           ids<span class="pl-k">:</span><span class="pl-smi">uiEx</span>.<span class="pl-en">getCheckedIds</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#rightsTree<span class="pl-pds">&quot;</span></span>).<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#<span class="pl-pds">&quot;</span></span>)
+       }
+   );
 }</pre>
-  </div> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
+</div> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* Property values specified node attributeArray get Checkbox tree selected, returns an array of values to obtain a list of</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">getCheckedInfos</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>#sysRoleAddRights<span class="pl-pds">&quot;</span></span>,[<span class="pl-s"><span class="pl-pds">&quot;</span>id<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>type<span class="pl-pds">&quot;</span></span>])</pre>
-  </div> </li> 
- <li> <p>API</p> 
-  <div class="highlight highlight-source-js">
-   <pre><span class="pl-c"><span class="pl-c">/*</span></span>
+</div> 
+<ul> 
+ <li>API</li> 
+</ul> 
+<div class="highlight highlight-source-js">
+ <pre><span class="pl-c"><span class="pl-c">/*</span></span>
 <span class="pl-c">* ############## Checkbox Tree</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Checkbox tree Initialization</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector tree selector or dom</span>
-<span class="pl-c">* <span class="pl-k">@param</span> param tree loading parameters </span>
-<span class="pl-c">* <span class="pl-k">@param</span> values The default value of the array is selected</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span> tree selector or dom</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">param</span> tree loading parameters </span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">values</span> The default value of the array is selected</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initTreeChk</span>(treeSelector, param, values);
 
-<span class="pl-c"><span class="pl-c">/**</span></span>
+ <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Use parentId attribute renderingCheckbox tree Initialization</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector tree selector or dom</span>
-<span class="pl-c">* <span class="pl-k">@param</span> param tree loading parameters </span>
-<span class="pl-c">* <span class="pl-k">@param</span> values The default value of the array is selected</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span> tree selector or dom</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">param</span> tree loading parameters </span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">values</span> The default value of the array is selected</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">initParentIdTreeChk</span>(treeSelector, param, values);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Tree with check boxes reset, with uiEx.treeChk use</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector tree selector or dom</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span> tree selector or dom</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">treeChkRest</span>(treeSelector);
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Set the selected tree box, Note: This method must be rendered in the tree after the call</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector tree selector or dom</span>
-<span class="pl-c">* <span class="pl-k">@param</span> values The selected tree node ID array</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span> tree selector or dom</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">values</span> The selected tree node ID array</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 <span class="pl-smi">uiEx</span>.<span class="pl-en">treeChkSetValues</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">treeSelector</span>, <span class="pl-smi">values</span>); 
 
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Id get an array of nodes with Checkbox tree selected</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector  tree selector or dom</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span>  tree selector or dom</span>
 <span class="pl-c">* <span class="pl-k">@return</span> Id array with Checkbox tree node selected</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 uiEx.getCheckedIds(treeSelector);
@@ -1776,16 +1810,15 @@ uiEx.getCheckedIds(treeSelector);
 <span class="pl-c"><span class="pl-c">/**</span></span>
 <span class="pl-c">* Property values specified node attributeArray get Checkbox tree selected, returns an array of values to obtain a list of</span>
 <span class="pl-c">* </span>
-<span class="pl-c">* <span class="pl-k">@param</span> treeSelector tree selector or dom</span>
-<span class="pl-c">* <span class="pl-k">@param</span> propertyArray Array tree property</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">treeSelector</span> tree selector or dom</span>
+<span class="pl-c">* <span class="pl-k">@param</span> <span class="pl-smi">propertyArray</span> Array tree property</span>
 <span class="pl-c">* <span class="pl-k">@return</span> Get an array of value list</span>
 <span class="pl-c"><span class="pl-c">*/</span></span>
 uiEx.getCheckedInfos(treeSelector, propertyArray);</pre>
-  </div> </li> 
-</ul> 
+</div> 
 <h3> <a id="310-custom-validator" class="anchor" href="#310-custom-validator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.10. Custom validator</h3> 
 <ul> 
- <li><p>Because authentication scenario and rules vary, according to the need to expand <code>easy.easyuiex-validate.js</code>, register the custom validator.</p></li> 
+ <li> <p>Because authentication scenario and rules vary, according to the need to expand <code>easy.easyuiex-validate.js</code>, register the custom validator.</p> </li> 
  <li> <p>Demo：</p> 
   <div class="highlight highlight-text-html-basic">
    <pre>&lt;<span class="pl-ent">input</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>renewpwd<span class="pl-pds">&quot;</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>renewpwd<span class="pl-pds">&quot;</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>easyui-textbox<span class="pl-pds">&quot;</span></span> 
@@ -1795,33 +1828,33 @@ data<span class="pl-e">-options</span>=<span class="pl-s"><span class="pl-pds">&
  <li> <p>API</p> 
   <div class="highlight highlight-source-js">
    <pre><span class="pl-en">$</span>(<span class="pl-k">function</span>() {
-  <span class="pl-c"><span class="pl-c">/*</span></span>
-<span class="pl-c">   * ################# Custom Validator</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
+	<span class="pl-c"><span class="pl-c">/*</span></span>
+<span class="pl-c">	 * ################# Custom Validator</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
 
-  <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">   * Comparing equals whit other input</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  <span class="pl-smi">$</span>.<span class="pl-en">extend</span>(<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">validatebox</span>.<span class="pl-smi">defaults</span>.<span class="pl-c1">rules</span>, {
-      equals <span class="pl-k">:</span> {
-          <span class="pl-en">validator</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">value</span>, <span class="pl-smi">param</span>) {
-              <span class="pl-k">return</span> value <span class="pl-k">==</span> <span class="pl-en">$</span>(param[<span class="pl-c1">0</span>]).<span class="pl-en">val</span>();
-          },
-          message <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>{1}<span class="pl-pds">'</span></span>
-      }
-  });
+	<span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c">	 * Comparing equals whit other input</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	<span class="pl-smi">$</span>.<span class="pl-en">extend</span>(<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">validatebox</span>.<span class="pl-smi">defaults</span>.<span class="pl-c1">rules</span>, {
+		equals <span class="pl-k">:</span> {
+			<span class="pl-en">validator</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">value</span>, <span class="pl-smi">param</span>) {
+				<span class="pl-k">return</span> value <span class="pl-k">==</span> <span class="pl-en">$</span>(param[<span class="pl-c1">0</span>]).<span class="pl-en">val</span>();
+			},
+			message <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>{1}<span class="pl-pds">'</span></span>
+		}
+	});
 
-  <span class="pl-c"><span class="pl-c">/**</span></span>
-<span class="pl-c">   * Comparing equals whit other input</span>
-<span class="pl-c">   <span class="pl-c">*/</span></span>
-  <span class="pl-smi">$</span>.<span class="pl-en">extend</span>(<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">validatebox</span>.<span class="pl-smi">defaults</span>.<span class="pl-c1">rules</span>, {
-      minLength <span class="pl-k">:</span> {
-          <span class="pl-en">validator</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">value</span>, <span class="pl-smi">param</span>) {
-              <span class="pl-k">return</span> <span class="pl-smi">value</span>.<span class="pl-c1">length</span> <span class="pl-k">&gt;=</span> param[<span class="pl-c1">0</span>];
-          },
-          message <span class="pl-k">:</span> <span class="pl-smi">uiEx</span>.<span class="pl-smi">msg</span>.<span class="pl-smi">minLength</span>
-      }
-  });
+	<span class="pl-c"><span class="pl-c">/**</span></span>
+<span class="pl-c">	 * Comparing equals whit other input</span>
+<span class="pl-c">	 <span class="pl-c">*/</span></span>
+	<span class="pl-smi">$</span>.<span class="pl-en">extend</span>(<span class="pl-smi">$</span>.<span class="pl-smi">fn</span>.<span class="pl-smi">validatebox</span>.<span class="pl-smi">defaults</span>.<span class="pl-c1">rules</span>, {
+		minLength <span class="pl-k">:</span> {
+			<span class="pl-en">validator</span> <span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">value</span>, <span class="pl-smi">param</span>) {
+				<span class="pl-k">return</span> <span class="pl-smi">value</span>.<span class="pl-c1">length</span> <span class="pl-k">&gt;=</span> param[<span class="pl-c1">0</span>];
+			},
+			message <span class="pl-k">:</span> <span class="pl-smi">uiEx</span>.<span class="pl-smi">msg</span>.<span class="pl-smi">minLength</span>
+		}
+	});
 
 })</pre>
   </div> </li> 
@@ -1838,7 +1871,7 @@ data<span class="pl-e">-options</span>=<span class="pl-s"><span class="pl-pds">&
 <span class="pl-c"> * The parentId type tree generates a transform function that is called in the loadFilter function of the tree component</span>
 <span class="pl-c"> <span class="pl-c">*/</span></span>
 <span class="pl-en">loadFilter</span><span class="pl-k">:</span><span class="pl-k">function</span>(<span class="pl-smi">rows</span>){
-    <span class="pl-smi">uiEx</span>.<span class="pl-en">convert</span>(rows);
+	<span class="pl-smi">uiEx</span>.<span class="pl-en">convert</span>(rows);
 }</pre>
 </div> 
 <h2> <a id="4-easyuiex-demo" class="anchor" href="#4-easyuiex-demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. EasyUIEx Demo：</h2> 

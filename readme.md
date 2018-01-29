@@ -5,7 +5,7 @@ EasyUIEx 是针对使用 `jQuery EasyUI` 框架开发的扩展性插件，主要
 
 EasyUIEx is for the use of ` jQuery EasyUI`  framework for the development of extensible plug-ins, mainly for common functions `EasyUI` framework encapsulates and expanded. Focusing encapsulates CRUD aspect extensions, can greatly increase the `EasyUI` usability, simplify operational complexity, and provide additional functionality.
 
-Test EasyUI version: `1.4.3`
+Test EasyUI version: `1.4.X`，`1.5.X`
 
 ## Feature/特征
 
